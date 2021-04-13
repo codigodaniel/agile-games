@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+		<link rel="stylesheet" href="kanban/kanban.css" id="theme">
+		<script type="text/javascript"  src="kanban/kanban.js"></script>
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>Slide 1</section>
+				<section>Slide 2</section>
+				<section>
+					<h2>Kanban Game</h2>
+					<div>
+						<button>reset backlog</button>
+<input name="method" id="method-pull" type="radio"> <label for="method-pull"> Pull </label>
+<input name="method" id="method-push" type="radio"> <label for="method-push"> Push </label>
+<button>Start!</button>
+
+					</div>
+					<table>
+						<thead>
+							<tr>
+								<th>
+								</th>
+								<th>
+<button>+ lane</button>
+<button>- lane</button>
+<br>
+WIP limit: <input type="text" size="1" disabled="true" id="kanban-game-wip" value="infinite"/>  
+<button onclick="g_kanban.change_wip();">+</button> <button onclick="g_kanban.change_wip(-1);">-</button> 
+<br>
+Discard policy: 
+
+								</th>
+								<th>Outcome</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Backlog</td>
+								<td>
+									Swimlane 1: 
+<br>
+									<button onclick="g_kanban.change_swimlane_policy(1);">+</button> 
+									<button onclick="g_kanban.change_swimlane_policy(1,-1);">-</button> 
+									size < <span id="kanban-game-lane-1">1</span>
+									<br>
+									Swimlane 2: 
+<br>
+									<button onclick="g_kanban.change_swimlane_policy(2);">+</button> 
+									<button onclick="g_kanban.change_swimlane_policy(2,-1);">-</button> 
+									size < <span id="kanban-game-lane-2">1</span>
+									<br>
+									Swimlane 3: 
+<br>
+									<button onclick="g_kanban.change_swimlane_policy(3);">+</button> 
+									<button onclick="g_kanban.change_swimlane_policy(3,-1);">-</button> 
+									size < <span id="kanban-game-lane-3">1</span>
+									<br>
+								</td>
+								<td>
+									value per week
+									time to market
+									
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
