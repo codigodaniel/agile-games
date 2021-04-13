@@ -6,3 +6,37 @@ table td{
 	background-color: redsd;
 	border-color: white;
 }
+
+
+.demo-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 290px;
+    height: 100%;
+    
+    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+	vertical-align: baseline;
+
+}
+
+.large_square{
+	width: 48px;
+    height: 48px;
+    background-color: #FF8F42;
+}
+
+.shadow {
+    position: absolute;
+    opacity: .2;
+}
+
+.el{
+    position: relative;
+}

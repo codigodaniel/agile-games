@@ -10,6 +10,7 @@
 		<link rel="stylesheet" href="dist/reveal.css">
 		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
 		<link rel="stylesheet" href="kanban/kanban.css" id="theme">
+		<script type="text/javascript"  src="http://animejs.com/lib/anime.min.js"></script>
 		<script type="text/javascript"  src="kanban/kanban.js"></script>
 
 		<!-- Theme used for syntax highlighted code -->
@@ -18,8 +19,6 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
 				<section>
 					<h2>Kanban Game</h2>
 					<div>
@@ -78,6 +77,17 @@ Discard policy:
 							</tr>
 						</tbody>
 					</table>
+
+				</section>
+				<section>
+				Flow animation
+  <div class="demo-content css-prop-demo">
+    <div class="large_square shadow"></div>
+    <div class="large_square el" style=""></div>
+  </div>
+
+<button onclick="g_pipeline.move_right();">animate</button> 
+<button onclick="g_pipeline.move_left();">back</button> 
 
 				</section>
 			</div>

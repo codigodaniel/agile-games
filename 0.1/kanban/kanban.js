@@ -21,6 +21,61 @@ class SchwarzKanbanGame{
 		document.getElementById(dom_id).innerHTML = new_value;
 
 	}
+
+}
+
+class AnimableHtml{
+	dom_target = '';
+	left = '0px';
+	borderRadius = 0;
+	borderRadiusTo = 0;
+	backgroundColor = "#FFF";
+
+	constructor(dom_target){
+		this.dom_target = dom_target;
+	}
+
+	move_right(){
+		this.borderRadiusTo = '50%';
+		this.left = '240px';
+		this.backgroundColor = "#FFF"
+		this.css_animate();
+	}
+
+	move_left(){
+		this.borderRadiusTo = '30%';
+		this.left = '0px';
+		this.backgroundColor = "#FAF"
+		this.css_animate();
+	}
+
+	reset(){
+		this.left = 0;
+		this.borderRadius = 0;
+		this.backgroundColor = "#FFF";
+	}
+
+	css_animate(){
+		anime({
+		  targets: this.dom_target,
+		  left: this.left,
+		  backgroundColor: this.backgroundColor,
+		  borderRadius: [this.borderRadius, this.borderRadiusTo],
+		  easing: 'easeInOutQuad'
+		});
+	}
+
+	process_PBI_to_circle(dom_target){
+		anime({
+		  targets: dom_target,
+		  //targets: '.css-prop-demo .el',
+		  left: '240px',
+		  backgroundColor: '#FFF',
+		  borderRadius: ['0%', '50%'],
+		  easing: 'easeInOutQuad'
+		});
+	}
 }
 
 var g_kanban = new SchwarzKanbanGame();
+var g_pipeline = new AnimableHtml('.css-prop-demo .el');
