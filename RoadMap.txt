@@ -1,0 +1,59 @@
+***********
+1.0 
+***********
+-------------------
+Concepts to explain
+-------------------
+
+wip limit
+waste
++ how to use it
++ how it works 
+
+--------
+Features
+--------
+
+show outcome in weeks 
+
+ticket size
++ with number or with graphical difference 
+
+ticket aging 
+--number in the ticket (discard) 
+++ 7 levels of color 
+
+show process capacity 
++ team size 
++ show users icons to represent the team size 
+
+***********
+2.0 
+***********
+-------------------
+Concepts to explain
+-------------------
+transparency
+pull 
+
+--------
+Features
+--------
+add second process column 
+
+choose game velocity
+
+***********
+3.0 
+***********
+-------------------
+Concepts to explain
+-------------------
+
+--------
+Features
+--------
+
+add swimlanes 
+
+
