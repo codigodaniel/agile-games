@@ -24,6 +24,10 @@ class SchwarzKanbanGame{
 
 }
 
+class TicketsHandler{
+
+}
+
 class AnimableHtml{
 	dom_target = '';
 	left = '0px';
@@ -38,7 +42,7 @@ class AnimableHtml{
 	move_right(){
 		this.borderRadiusTo = '50%';
 		this.left = '240px';
-		this.backgroundColor = "#FFF"
+		this.backgroundColor = "#000"
 		this.css_animate();
 	}
 
@@ -52,7 +56,7 @@ class AnimableHtml{
 	reset(){
 		this.left = 0;
 		this.borderRadius = 0;
-		this.backgroundColor = "#FFF";
+		this.backgroundColor = "#000";
 	}
 
 	css_animate(){

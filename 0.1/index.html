@@ -4,17 +4,22 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Schwarz IT Javascript Agile Games</title>
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://academy.mybcdigital.com/resources/js/jkanban/dist/jkanban.css">
+    <link rel="stylesheet" href="https://academy.mybcdigital.com/resources/alexandria/reveal_4_1_0/reveal/dist/reveal.css">
+    <link rel="stylesheet" href="https://academy.mybcdigital.com/resources/alexandria/css/main.css">
+    <link rel="stylesheet" id="ci-theme">
+    <link rel="stylesheet" id="mode">
+
+
 		<link rel="stylesheet" href="kanban/kanban.css" id="theme">
 		<script type="text/javascript"  src="http://animejs.com/lib/anime.min.js"></script>
 		<script type="text/javascript"  src="kanban/kanban.js"></script>
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
 	</head>
 	<body>
 		<div class="reveal">
@@ -93,20 +98,20 @@ Discard policy:
 			</div>
 		</div>
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+	<script src="https://academy.mybcdigital.com/resources/alexandria/reveal_4_1_0/reveal/dist/reveal.js"></script>
+    <script src="https://academy.mybcdigital.com/resources/alexandria/reveal_4_1_0/reveal/plugin/highlight/highlight.js"></script>
+    <script src='https://academy.mybcdigital.com/resources/alexandria/reveal_4_1_0/reveal/plugin/notes/notes.js'></script>
+    <script src='https://academy.mybcdigital.com/resources/alexandria/reveal_4_1_0/3rd_party_plugins/reveal.js-plugins/chalkboard/plugin.js'></script>
+    <script>
+        Reveal.initialize({
+            width: 1600,
+            height: 900,
+            center: true,
+            hash: true,
+            plugins: [RevealChalkboard, RevealHighlight, RevealNotes]
+        });
+        TrainingModule("is-left");
+    </script>
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
 	</body>
 </html>
