@@ -7,6 +7,9 @@ table td{
 	border-color: white;
 }
 
+button{
+	padding: 5px 5px;
+}
 
 .demo-content {
     position: relative;
@@ -55,7 +58,7 @@ table td{
 	width: 48px;
     height: 48px;
     background-color: #FF8F42;
-    position: relative;
+    position: absolute;
     margin: 2px;
     float: left;
 }

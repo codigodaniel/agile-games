@@ -1,3 +1,4 @@
+
 class SchwarzKanbanGame{
 
     change_wip(delta = 1){
@@ -24,26 +25,81 @@ class SchwarzKanbanGame{
 
 class TicketsHandler{
     backlog = [];
+    wip = [];
+    done = [];
     board_id = '';
+    current_ticket = 0;
+    step_delay = 300; 
+    backlog_size = 10;
 
     constructor(){
         
     }
 
     init(){
-        for (var i = 0; i < 20; i++) {
+        for (var i = 1; i <  this.backlog_size ; i++) {
             let kt = new KanbanTicket(i);
             kt.board_id = this.board_id;
             kt.init_html();
+            
             this.backlog.push(kt);
         }
+        for (var i = 0; i < this.backlog_size; i++) {
+            let kt = this.backlog[i];
+            kt.move(3,this.calculate_position(kt.id));
+        }
     }
-    run(){
-        for (var i = 0; i < 20; i++) {
-            //console.log(this.backlog[i]);
-            this.backlog[i].move_wip();
+
+    pull_to_done(self){
+        if(this.wip.length > 0){
+            this.move_to_done();
+        }else{
+            this.pull_to_wip();
+        }
+    }
+
+    pull_to_wip(self){
+        if(this.backlog.length > 0){
 
         }
+    }
+
+    process_backlog_to_wip(self){
+        let tk = self.move_to_wip();
+        if(tk){
+            setTimeout(function(){ return self.process_backlog_to_wip(self); },self.step_delay);
+        }
+    }
+
+    process_wip_to_done(self){
+        let tk = self.move_to_done();
+        if(tk){
+            setTimeout(function(){ return self.process_wip_to_done(self); },self.step_delay);
+        }
+    }
+
+    move_to_wip(){
+        let tk = this.backlog.shift();
+        if(tk){
+            this.wip.push(tk);
+            tk.move(316, this.calculate_position(tk.id));
+            return tk;
+        }
+    }
+
+    move_to_done(){
+        let tk = this.wip.shift();
+        if(tk){
+            this.done.push(tk);
+            tk.move(636, this.calculate_position(tk.id));
+            return tk;
+        }
+    }
+
+    calculate_position(position){
+        let p = (position-1)*50;
+        console.log(position+' = '+p)
+        return p;
     }
 }
 
@@ -54,6 +110,7 @@ class KanbanTicket{
     html = null;
     board_id = '';
     element_id = '';
+
     constructor(id, size = 1){
         this.size = size;
         this.id = id;
@@ -61,21 +118,21 @@ class KanbanTicket{
 
     init_html(){
         this.element_id = "k-ticket-"+this.id;
-        document.getElementById(this.board_id).innerHTML += '<div id="'+this.element_id+'" class="k-ticket"></div>';
+        document.getElementById(this.board_id).innerHTML += '<div id="'+this.element_id+'" class="k-ticket">'+this.id+'</div>';
         this.html = new AnimableDiv(this.element_id);
     }
 
-    move_wip(){
-        this.html.left = '316px';
-        this.html.top = '0px';
+    move(x,y){
+        this.html.left = x+'px';
+        this.html.top = y+'px';
         this.html.css_animate();
     }
 }
 
 class AnimableDiv{
     element_id = '';
-    left = '0px';
-    top = '0px';
+    left = '5px';
+    top = '5px';
     constructor(element_id){
         this.element_id = '#'+element_id;
     }
@@ -155,4 +212,13 @@ function init_section_3(){
 s3_handler = new TicketsHandler();
 s3_handler.board_id = 'k-board-s3';
 s3_handler.init();
+}
+
+//var game=null;
+function run_game_section_3_to_wip(){
+    s3_handler.process_backlog_to_wip(s3_handler);
+}
+
+function run_game_section_3_to_done(){
+    s3_handler.process_wip_to_done(s3_handler);
 }

@@ -6,19 +6,14 @@
 
 		<title>Schwarz IT Javascript Agile Games</title>
 
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://academy.mybcdigital.com/resources/js/jkanban/dist/jkanban.css">
-    <link rel="stylesheet" href="https://academy.mybcdigital.com/resources/alexandria/reveal_4_1_0/reveal/dist/reveal.css">
-    <link rel="stylesheet" href="https://academy.mybcdigital.com/resources/alexandria/css/main.css">
-    <link rel="stylesheet" id="ci-theme">
-    <link rel="stylesheet" id="mode">
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+	<link rel="stylesheet" href="kanban/kanban.css" id="theme">
 
-
-		<link rel="stylesheet" href="kanban/kanban.css" id="theme">
-		<script type="text/javascript"  src="http://animejs.com/lib/anime.min.js"></script>
-		<script type="text/javascript"  src="kanban/kanban.js"></script>
+	<link rel="stylesheet" href="kanban/kanban.css" id="theme">
+	<script type="text/javascript"  src="http://animejs.com/lib/anime.min.js"></script>
+	<script type="text/javascript"  src="kanban/kanban.js"></script>
 
 	</head>
 	<body>
@@ -97,32 +92,34 @@ Discard policy:
 				</section>
 				<section>
 					<h3>Section 3</h3>
-				
+  <div  class="">
+	<button onclick="init_section_3();">Setup Board</button> 
+	<button onclick="run_game_section_3_to_wip();">to wip</button> 
+	<button onclick="run_game_section_3_to_done();">to done</button> 
+  </div>
   <div id="k-board-s3" class="k-board"></div>
   <div id="k-board-s3-c2" class="k-board"></div>
   <div id="k-board-s3-c3" class="k-board"></div>
-
-<button onclick="init_section_3();">Setup Board</button> 
-<button onclick="s3_handler.run();">Run</button> 
-
 				</section>
 			</div>
 		</div>
 
-	<script src="https://academy.mybcdigital.com/resources/alexandria/reveal_4_1_0/reveal/dist/reveal.js"></script>
-    <script src="https://academy.mybcdigital.com/resources/alexandria/reveal_4_1_0/reveal/plugin/highlight/highlight.js"></script>
-    <script src='https://academy.mybcdigital.com/resources/alexandria/reveal_4_1_0/reveal/plugin/notes/notes.js'></script>
-    <script src='https://academy.mybcdigital.com/resources/alexandria/reveal_4_1_0/3rd_party_plugins/reveal.js-plugins/chalkboard/plugin.js'></script>
-    <script>
-        Reveal.initialize({
-            width: 1600,
-            height: 900,
-            center: true,
-            hash: true,
-            plugins: [RevealChalkboard, RevealHighlight, RevealNotes]
-        });
-        //TrainingModule("is-left");
-    </script>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
 
 	</body>
 </html>
