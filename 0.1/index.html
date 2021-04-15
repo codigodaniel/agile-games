@@ -95,6 +95,17 @@ Discard policy:
 <button onclick="g_pipeline.move_left();">back</button> 
 
 				</section>
+				<section>
+					<h3>Section 3</h3>
+				
+  <div id="k-board-s3" class="k-board"></div>
+  <div id="k-board-s3-c2" class="k-board"></div>
+  <div id="k-board-s3-c3" class="k-board"></div>
+
+<button onclick="init_section_3();">Setup Board</button> 
+<button onclick="s3_handler.run();">Run</button> 
+
+				</section>
 			</div>
 		</div>
 
@@ -110,7 +121,7 @@ Discard policy:
             hash: true,
             plugins: [RevealChalkboard, RevealHighlight, RevealNotes]
         });
-        TrainingModule("is-left");
+        //TrainingModule("is-left");
     </script>
 
 	</body>
