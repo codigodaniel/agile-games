@@ -1,10 +1,6 @@
 //***************
 // SECTION 4
 //***************
-function t(m = "test"){
-    console.log(m);
-}
-
 
 class S4_KanbanNode{
     next = null;
@@ -110,8 +106,10 @@ class S4_KanbanColumn{
 
     extract_FIFO(){
         let n = this.next_node;
-        this.next_node = this.next_node.next_node;
-        n.next_node = null;
+        if(n){
+            this.next_node = this.next_node.next_node;
+            n.next_node = null;
+        }
         return n;
     }
 
@@ -133,7 +131,7 @@ class S4_TicketsHandler{
     backlog = new S4_KanbanColumn(1,3);
     wip =  new S4_KanbanColumn(2,316);
     done =  new S4_KanbanColumn(3,636);
-    step_delay = 300; 
+    step_delay = 900; 
 
     constructor(){
         this.backlog.init_load_nodes();
@@ -147,29 +145,38 @@ class S4_TicketsHandler{
     update_board(){
         this.backlog.arrange_backlog();
         this.wip.arrange_backlog();
+        this.done.arrange_backlog();
     }
 
-    pull_game(){
+    pull_game(self){
+        let tk = self.pull_to_done();
+        this.update_board();
+        if(tk){
+            setTimeout(function(){ return self.pull_game(self); },self.step_delay);
+        }
+    }
 
-        let n = this.backlog.extract_FIFO();
-        this.wip.insert(n);
+    pull_game_step(){
+        this.pull_to_done();
         this.update_board();
     }
 
-
-
-    pull_to_wip(self){
-
-    }
-
-    pull_to_done(self){
-    }
-
-    process_backlog_to_wip(self){
-        let tk = self.move_to_wip();
-        if(tk){
-            setTimeout(function(){ return self.process_backlog_to_wip(self); },self.step_delay);
+    pull_to_wip(){
+        let n = this.backlog.extract_FIFO();
+        if(n){
+            this.wip.insert(n);
         }
+        return n;
+    }
+
+    pull_to_done(){
+        let n = this.wip.extract_FIFO();
+        if(n){
+            this.done.insert(n);
+        }else{
+            n = this.pull_to_wip();
+        }
+        return n;
     }
 
 }
@@ -179,15 +186,14 @@ class S4_TicketsHandler{
 //*******************
 
 var s4_handler = null;
-
+    
 function init_section_4(){
     s4_handler = new S4_TicketsHandler();
     s4_handler.board_id = 'k-board-s4-c1';
     s4_handler.init_html();
-
 }
 
 function run_game_section_4(argument) {
-    s4_handler.pull_game();
+    if(!s4_handler) init_section_4();
+    s4_handler.pull_game(s4_handler);
 }
-
