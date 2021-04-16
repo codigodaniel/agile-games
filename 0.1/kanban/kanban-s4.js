@@ -1,7 +1,7 @@
 //***************
 // SECTION 4
 //***************
-function t(m = "puto"){
+function t(m = "test"){
     console.log(m);
 }
 
@@ -153,8 +153,6 @@ class S4_TicketsHandler{
 
         let n = this.backlog.extract_FIFO();
         this.wip.insert(n);
-        t(this.backlog);
-        t(this.wip);
         this.update_board();
     }
 
@@ -165,13 +163,7 @@ class S4_TicketsHandler{
     }
 
     pull_to_done(self){
-        if(this.wip.length > 0){
-            this.move_to_done();
-        }else{
-            this.pull_to_wip();
-        }
     }
-
 
     process_backlog_to_wip(self){
         let tk = self.move_to_wip();
@@ -180,74 +172,6 @@ class S4_TicketsHandler{
         }
     }
 
-    process_wip_to_done(self){
-        let tk = self.move_to_done();
-        if(tk){
-            setTimeout(function(){ return self.process_wip_to_done(self); },self.step_delay);
-        }
-    }
-
-    move_to_wip(){
-        let tk = this.backlog.shift();
-        if(tk){
-            this.wip.push(tk);
-            tk.move(316, this.calculate_position(tk.id));
-            return tk;
-        }
-    }
-
-    move_to_done(){
-        let tk = this.wip.shift();
-        if(tk){
-            this.done.push(tk);
-            tk.move(636, this.calculate_position(tk.id));
-            return tk;
-        }
-    }
-
-    calculate_position(position){
-        let p = (position-1)*50;
-        return p;
-    }
-}
-
-class S4_KanbanHtmlTicket{
-    slide = 4;
-    size = 1;
-    id = 0;
-    age = 0;
-    html = null;
-    board_id = '';
-    element_id = '';
-    left = '5px';
-    top = '5px';
-
-    constructor(id, size = 1){
-        this.size = size;
-        this.id = id;
-    }
-
-    init_html(){
-        this.element_id = "s"+this.slide + "k-ticket-"+this.id;
-        document.getElementById(this.board_id).innerHTML += '<div id="'+this.element_id+'" class="k-ticket">'+this.id+'</div>';
-    }
-
-    move(x,y){
-        this.html.left = x+'px';
-        this.html.top = y+'px';
-        this.html.css_animate();
-    }
-
-    css_animate(){
-        anime({
-          targets: '#'+this.element_id,
-          left: this.left,
-          top: this.top,
-          //backgroundColor: this.backgroundColor,
-          //borderRadius: [this.borderRadius, this.borderRadiusTo],
-          easing: 'easeInOutQuad'
-        });
-    }
 }
 
 //*******************
