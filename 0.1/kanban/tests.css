@@ -1,0 +1,48 @@
+
+
+body, table, tr, td {
+  background-color: #000;
+}
+
+h1, h2, pre, div{
+  color: green;
+}
+
+table, tr, td {
+  margin: 10px;
+  padding: 5px;
+}
+
+table, td {
+  vertical-align: text-top;
+  border: 1px solid #5a7;
+}
+
+pre {
+  text-align: left;
+  /*font-size: 13px;*/
+}
+
+#pre-obj-users {
+  max-width: 500px;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+
+
+#mocha-stats li, #mocha-stats li em {
+  font-weight: bold;
+}
+
+#mocha-stats li.passes em {
+  color: green;
+}
+
+#mocha-stats li.failures em {
+  color: red;
+}
+
+#mocha-stats li.duration em {
+  color: yellow;
+}

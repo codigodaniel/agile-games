@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <title>Test: Kanban Games</title>
+
+        <link rel="stylesheet" href="https://unpkg.com/mocha/mocha.css" />
+        <link rel="stylesheet" type="text/css" href="tests.css">
+
+        <script type="text/javascript"  src="kanban.js"></script>
+        <script type="text/javascript"  src="kanban-s4.js"></script>
+
+    </head>
+    <body>
+        <h1>Kanban Tests</h1>
+        <div class="col-12" id="mocha"></div>
+
+        <!-- MOCHA -->
+        <script src="https://unpkg.com/chai/chai.js"></script>
+        <script src="https://unpkg.com/mocha/mocha.js"></script>
+        <script>mocha.setup('bdd')</script>
+        <script>mocha.run();</script>
+
+        <!-- TESTS -->
+        <script type="text/javascript"  src="tests.js"></script>
+    </body>
+</html>
