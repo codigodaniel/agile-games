@@ -41,4 +41,15 @@ describe("Node handling", function() {
         assert.equal(column.count(), 10);
     });
 
+    it("S4_KanbanColumn.extract_FIFO() removes first ", function() {
+    	let column = new S4_KanbanColumn();
+    	column.insert(new S4_KanbanNode(1))
+    	column.insert(new S4_KanbanNode(2))
+    	column.insert(new S4_KanbanNode(3))
+    	let kn = column.extract_FIFO();
+        assert.equal(kn.id, 1);
+        assert.equal(kn.next_node, null);
+        assert.equal(column.count(), 2);
+    });
+
 });

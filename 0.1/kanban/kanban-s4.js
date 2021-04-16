@@ -1,6 +1,10 @@
 //***************
 // SECTION 4
 //***************
+function t(m = "puto"){
+    console.log(m);
+}
+
 
 class S4_KanbanNode{
     next = null;
@@ -36,10 +40,10 @@ class S4_KanbanNode{
         document.getElementById(board_id).innerHTML += '<div id="'+this.element_id+'" class="k-ticket">'+this.id+'</div>';
     }
 
-    align(y){
-        this.move(3,y);
+    align(x,y){
+        this.move(x,y);
         if(this.next_node){
-            this.next_node.align(y+51);
+            this.next_node.align(x, y+51);
         }
     }
 
@@ -67,8 +71,11 @@ class S4_KanbanColumn{
     column_number;
     next_node = null;
     board_id;
-    constructor(number){
+    position_x;
+
+    constructor(number, position_x){
         this.column_number = number;
+        this.position_x = position_x;
         this.board_id = "k-board-s"+this.slide+"-c"+this.column_number;
     }
 
@@ -80,6 +87,7 @@ class S4_KanbanColumn{
     }
 
     init_html(){
+        document.getElementById(this.board_id).innerHTML = null;
         if(this.next_node){
             this.next_node.init_html(this.board_id);
         }
@@ -87,7 +95,7 @@ class S4_KanbanColumn{
 
     arrange_backlog(){
         if(this.next_node){
-            this.next_node.align(3);
+            this.next_node.align(this.position_x, 3);
         }
     }
 
@@ -101,7 +109,10 @@ class S4_KanbanColumn{
     }
 
     extract_FIFO(){
-        return  this.next_node;
+        let n = this.next_node;
+        this.next_node = this.next_node.next_node;
+        n.next_node = null;
+        return n;
     }
 
     count(){
@@ -119,9 +130,9 @@ class S4_KanbanColumn{
 
 class S4_TicketsHandler{
     slide = 4;
-    backlog = new S4_KanbanColumn(1);
-    wip =  new S4_KanbanColumn(2);
-    done =  new S4_KanbanColumn(3);
+    backlog = new S4_KanbanColumn(1,3);
+    wip =  new S4_KanbanColumn(2,316);
+    done =  new S4_KanbanColumn(3,636);
     step_delay = 300; 
 
     constructor(){
@@ -133,11 +144,24 @@ class S4_TicketsHandler{
         this.backlog.arrange_backlog();
     }
 
-    arrange_backlog(){
-        for (var i = 0; i < this.backlog.length; i++) {
-            let kt = this.backlog[i];
-            kt.move(3,this.calculate_position(kt.id));
-        }
+    update_board(){
+        this.backlog.arrange_backlog();
+        this.wip.arrange_backlog();
+    }
+
+    pull_game(){
+
+        let n = this.backlog.extract_FIFO();
+        this.wip.insert(n);
+        t(this.backlog);
+        t(this.wip);
+        this.update_board();
+    }
+
+
+
+    pull_to_wip(self){
+
     }
 
     pull_to_done(self){
@@ -148,11 +172,6 @@ class S4_TicketsHandler{
         }
     }
 
-    pull_to_wip(self){
-        if(this.backlog.length > 0){
-
-        }
-    }
 
     process_backlog_to_wip(self){
         let tk = self.move_to_wip();
@@ -235,7 +254,7 @@ class S4_KanbanHtmlTicket{
 //      SETUP
 //*******************
 
-var s4_handler = new S4_TicketsHandler();
+var s4_handler = null;
 
 function init_section_4(){
     s4_handler = new S4_TicketsHandler();
@@ -245,5 +264,6 @@ function init_section_4(){
 }
 
 function run_game_section_4(argument) {
-    s4_handler.process_backlog_to_wip(s4_handler);
+    s4_handler.pull_game();
 }
+
