@@ -4,6 +4,39 @@ body, table, tr, td {
   background-color: #000;
 }
 
+h1{text-align: center;}
+
+#mocha-report h1{
+  font-size: 30px;
+  text-align: left;
+}
+
+#mocha-report li.pass h2{
+  font-size: 20px;
+}
+
+
+#mocha .test.pass::before{
+  font-size: 20px;
+
+}
+
+#mocha .test.fail pre{
+  color:#f96105;
+  background-color: #9d0303;
+}
+
+
+#mocha .test.fail::before{
+  font-size: 20px;
+
+}
+
+#mocha .test.fail h2{
+  color:#f96105;
+  font-size: 20px;
+}
+
 h1, h2, pre, div{
   color: green;
 }

@@ -8,13 +8,14 @@
 	<link rel="stylesheet" href="dist/reset.css">
 	<link rel="stylesheet" href="dist/reveal.css">
 	<link rel="stylesheet" href="dist/theme/black.css" id="theme">
-	<link rel="stylesheet" href="kanban/kanban.css" id="theme">
+
+	<script type="text/javascript"  src="http://animejs.com/lib/anime.min.js"></script>
 
 	<link rel="stylesheet" href="kanban/kanban.css" id="theme">
-	<script type="text/javascript"  src="http://animejs.com/lib/anime.min.js"></script>
-	<script type="text/javascript"  src="kanban/tools.js"></script>
+	<script type="text/javascript"  src="kanban/env/tools.js"></script>
 	<script type="text/javascript"  src="kanban/kanban.js"></script>
 	<script type="text/javascript"  src="kanban/kanban-s4.js"></script>
+	<script type="text/javascript"  src="kanban/kanban-s5.js"></script>
 
 	</head>
 	<body>
@@ -108,17 +109,32 @@ Discard policy:
 				<section>
 					<h3>Section 4</h3>
   <div  class="">
-	<button onclick="init_section_4();">1: Setup Board</button> 
+	<button onclick="s4_handler.restart();">1: Reset Board</button> 
 	<select>
 		<option>2: Choose WIP limit</option>
 		<option value="1">WIP limit = 1</option>
 	</select>
-	<button onclick="run_game_section_4();">3: Pull all!</button> 
+	<button onclick="s4_handler.run_game();">3: Pull all!</button> 
 	<button onclick="s4_handler.pull_game_step();">3b: Step by step</button> 
   </div>
   <div id="k-board-s4-c1" class="k-board"></div>
   <div id="k-board-s4-c2" class="k-board"></div>
   <div id="k-board-s4-c3" class="k-board"></div>
+				</section>
+				<section>
+					<h3>Section 5</h3>
+  <div  class="">
+	<button onclick="s5_handler.init_section();">1: Setup Board</button> 
+	<select>
+		<option>2: Choose WIP limit</option>
+		<option value="1">WIP limit = 1</option>
+	</select>
+	<button onclick="s5_handler.run_game();">3: Pull all!</button> 
+	<button onclick="s5_handler.pull_game_step();">3b: Step by step</button> 
+  </div>
+  <div id="k-board-s5-c1" class="k-board"></div>
+  <div id="k-board-s5-c2" class="k-board"></div>
+  <div id="k-board-s5-c3" class="k-board"></div>
 				</section>
 			</div>
 		</div>

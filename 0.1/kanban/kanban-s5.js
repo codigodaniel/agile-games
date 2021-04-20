@@ -1,28 +1,25 @@
 //***************
-// SECTION 4
+// SECTION 5
 //***************
+/*
+find and replace:
+S5_KanbanNode
+S5_KanbanColumn
+S5_TicketsHandler
+s5_handler
+*/
 
-class S4_SectionElement{
-    section = 4;
-}
-
-class S4_Node extends S4_SectionElement{
+class S5_KanbanNode{
+    next = null;
     id = 0;
-    next_node = null;
+    section = 5;
+    element_id = '';
+    left = '';
+    top = '';
 
     constructor(id){
-        super();
         this.id = id;
     }
-
-    count(number = 0){
-        if(this.next_node){
-            return this.next_node.count(number + 1);
-        }else{
-            return number;
-        }
-    }
-
     insert(ticket){
         if (!this.next_node){
             this.next_node = ticket;
@@ -31,17 +28,13 @@ class S4_Node extends S4_SectionElement{
         }
     }
 
-}
-
-class S4_KanbanNode extends S4_Node{
-    element_id = '';
-    left = '';
-    top = '';
-
-    constructor(id){
-        super(id);
+    count(number){
+        if(this.next_node){
+            return this.next_node.count(number + 1);
+        }else{
+            return number;
+        }
     }
-
     init_html(board_id){
         if(this.next_node){
             this.next_node.init_html(board_id);
@@ -70,31 +63,34 @@ class S4_KanbanNode extends S4_Node{
           top: this.top,
           //backgroundColor: this.backgroundColor,
           //borderRadius: [this.borderRadius, this.borderRadiusTo],
-//          easing: 'easeInOutQuad'
+          easing: 'easeInOutQuad'
         });
     }
 }
 
-class S4_KanbanColumn  extends S4_Node{
+class S5_KanbanColumn{
+    section = 5;
     backlog_size = 10;
+    column_number;
+    next_node = null;
     board_id;
     position_x;
 
-    constructor(id, position_x){
-        super(id);
+    constructor(number, position_x){
+        this.column_number = number;
         this.position_x = position_x;
-        this.board_id = "k-board-s"+this.section+"-c"+this.id;
+        this.board_id = "k-board-s"+this.section+"-c"+this.column_number;
     }
 
     init_load_nodes(){
         for (var i = 1; i <=  this.backlog_size ; i++) {
-            let n = new S4_KanbanNode(i);
+            let n = new S5_KanbanNode(i);
             this.insert(n);
         }
     }
 
     init_html(){
-        document.getElementById(this.board_id).innerHTML = '';
+        document.getElementById(this.board_id).innerHTML = null;
         if(this.next_node){
             this.next_node.init_html(this.board_id);
         }
@@ -106,6 +102,15 @@ class S4_KanbanColumn  extends S4_Node{
         }
     }
 
+    insert(ticket){
+        if (!this.next_node){
+            this.next_node = ticket;
+        }else{
+            this.next_node.insert(ticket);
+        }
+        
+    }
+
     extract_FIFO(){
         let n = this.next_node;
         if(n){
@@ -115,34 +120,28 @@ class S4_KanbanColumn  extends S4_Node{
         return n;
     }
 
+    count(){
+        if(this.next_node){
+            return this.next_node.count(1);
+        }else{
+            return 0;
+        }
+    }
+
     extract(){
         return  this.next_node;
     }
 }
 
-class S4_TicketsHandler  extends S4_SectionElement{
-    backlog;
-    wip;
-    done;
-    step_delay = 500; 
+class S5_TicketsHandler{
+    section = 5;
+    backlog = new S5_KanbanColumn(1,3);
+    wip =  new S5_KanbanColumn(2,316);
+    done =  new S5_KanbanColumn(3,636);
+    step_delay = 900; 
 
     constructor(){
-        super();
-        this.reset_columns();
         this.backlog.init_load_nodes();
-        this.board_id = 'k-board-s'+this.section+'-c1';
-    }
-
-    restart(){
-        this.reset_columns();
-        this.backlog.init_load_nodes();
-        this.init_html();
-    }
-
-    reset_columns(){
-        this.backlog = new S4_KanbanColumn(1,3);
-        this.wip =  new S4_KanbanColumn(2,316);
-        this.done =  new S4_KanbanColumn(3,636);
     }
 
     init_html(){
@@ -181,25 +180,24 @@ class S4_TicketsHandler  extends S4_SectionElement{
         let n = this.wip.extract_FIFO();
         if(n){
             this.done.insert(n);
-            this.pull_to_wip();
         }else{
             n = this.pull_to_wip();
         }
         return n;
     }
 
+//*******************
+//      SETUP
+//*******************
     init_section(){
-        this.init_html();
+        s5_handler.board_id = 'k-board-s'+this.section+'-c1';
+        s5_handler.init_html();
     }
 
-    run_game() {
+    run_game(argument) {
         this.pull_game(this);
     }
 
 }
 
-//*******************
-//      SETUP
-//*******************
-
-var s4_handler = new S4_TicketsHandler();
+var s5_handler = new S5_TicketsHandler();
