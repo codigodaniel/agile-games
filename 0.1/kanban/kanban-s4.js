@@ -37,10 +37,14 @@ class S4_KanbanNode extends S4_Node{
     element_id = '';
     left = '';
     top = '';
+    to_do = 2;
+    age = 0;
 
     constructor(id){
         super(id);
     }
+
+    /* Html */
 
     init_html(board_id){
         if(this.next_node){
@@ -73,12 +77,24 @@ class S4_KanbanNode extends S4_Node{
 //          easing: 'easeInOutQuad'
         });
     }
+    /* Process Work */
+    work(){
+        if(this.to_do){
+            this.to_do--;
+        }
+        //if(this.next_node) next_node.work();
+    }
+
 }
 
 class S4_KanbanColumn  extends S4_Node{
     backlog_size = 10;
     board_id;
     position_x;
+    wip_limit = 100;
+    wasted_time = 0;
+    
+    /* Setup */
 
     constructor(id, position_x){
         super(id);
@@ -93,6 +109,8 @@ class S4_KanbanColumn  extends S4_Node{
         }
     }
 
+    /*Html*/
+
     init_html(){
         document.getElementById(this.board_id).innerHTML = '';
         if(this.next_node){
@@ -106,6 +124,8 @@ class S4_KanbanColumn  extends S4_Node{
         }
     }
 
+    /* Node handling*/
+
     extract_FIFO(){
         let n = this.next_node;
         if(n){
@@ -115,9 +135,33 @@ class S4_KanbanColumn  extends S4_Node{
         return n;
     }
 
-    extract(){
-        return  this.next_node;
+
+    /* Process Pull */
+
+    extract_DONE(){
+        if(this.next_node){
+            if(this.next_node.to_do == 0) return this.extract_FIFO();
+        }
     }
+
+    get_space(){
+        return this.wip_limit - this.count();
+    }
+
+    /* Process Work */
+    work(){
+        if(this.next_node) this.next_node.work();
+    }
+
+    switch_cost(){
+        if(this.count() > this.wasted_time){
+            this.wasted_time++;
+        }else{
+            this.wasted_time = 1;
+        }
+        return this.count() - this.wasted_time;
+    }
+
 }
 
 class S4_TicketsHandler  extends S4_SectionElement{
@@ -125,18 +169,21 @@ class S4_TicketsHandler  extends S4_SectionElement{
     wip;
     done;
     step_delay = 500; 
+    play = false;
 
     constructor(){
         super();
         this.reset_columns();
-        this.backlog.init_load_nodes();
+        //this.backlog.init_load_nodes();
         this.board_id = 'k-board-s'+this.section+'-c1';
     }
 
     restart(){
+        this.play = false;
         this.reset_columns();
         this.backlog.init_load_nodes();
         this.init_html();
+        this.wip.wip_limit = 100;
     }
 
     reset_columns(){
@@ -148,6 +195,7 @@ class S4_TicketsHandler  extends S4_SectionElement{
     init_html(){
         this.backlog.init_html();
         this.backlog.arrange_backlog();
+        document.getElementById("k-select-wip-s4").value = 100;
     }
 
     update_board(){
@@ -157,33 +205,38 @@ class S4_TicketsHandler  extends S4_SectionElement{
     }
 
     pull_game(self){
-        let tk = self.pull_to_done();
-        this.update_board();
-        if(tk){
+        if(this.play){
+            if(!self.wip.switch_cost()) self.wip.work();
+            self.pull_to_done();
+            self.pull_to_wip();
+            self.update_board();
+        }
+        let rest = self.backlog.count() + self.wip.count();
+        if(rest && this.play){
             setTimeout(function(){ return self.pull_game(self); },self.step_delay);
         }
     }
 
     pull_game_step(){
+        if(!this.wip.switch_cost()) this.wip.work();
         this.pull_to_done();
+        this.pull_to_wip();
         this.update_board();
     }
 
     pull_to_wip(){
-        let n = this.backlog.extract_FIFO();
-        if(n){
-            this.wip.insert(n);
+        let n;
+        let ammount = this.wip.get_space();
+        for (var i = 0; i < ammount; i++) {
+            this.wip.insert(this.backlog.extract_FIFO());
         }
         return n;
     }
 
     pull_to_done(){
-        let n = this.wip.extract_FIFO();
+        let n = this.wip.extract_DONE();
         if(n){
             this.done.insert(n);
-            this.pull_to_wip();
-        }else{
-            n = this.pull_to_wip();
         }
         return n;
     }
@@ -193,6 +246,7 @@ class S4_TicketsHandler  extends S4_SectionElement{
     }
 
     run_game() {
+        this.play = true;
         this.pull_game(this);
     }
 

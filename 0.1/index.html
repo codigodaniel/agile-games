@@ -110,9 +110,13 @@ Discard policy:
 					<h3>Section 4</h3>
   <div  class="">
 	<button onclick="s4_handler.restart();">1: Reset Board</button> 
-	<select>
-		<option>2: Choose WIP limit</option>
-		<option value="1">WIP limit = 1</option>
+	<select id="k-select-wip-s4" onchange="s4_handler.wip.wip_limit = this.value;">
+		<option value="1">2: WIP limit = 1</option>
+		<option value="2">2: WIP limit = 2</option>
+		<option value="3">2: WIP limit = 3</option>
+		<option value="5">2: WIP limit = 5</option>
+		<option value="8">2: WIP limit = 8</option>
+		<option value="100" selected="true">2: NO WIP limit!</option>
 	</select>
 	<button onclick="s4_handler.run_game();">3: Pull all!</button> 
 	<button onclick="s4_handler.pull_game_step();">3b: Step by step</button> 
@@ -124,13 +128,13 @@ Discard policy:
 				<section>
 					<h3>Section 5</h3>
   <div  class="">
-	<button onclick="s5_handler.init_section();">1: Setup Board</button> 
+	<button onclick="S5_handler.init_section();">1: Setup Board</button> 
 	<select>
 		<option>2: Choose WIP limit</option>
 		<option value="1">WIP limit = 1</option>
 	</select>
-	<button onclick="s5_handler.run_game();">3: Pull all!</button> 
-	<button onclick="s5_handler.pull_game_step();">3b: Step by step</button> 
+	<button onclick="S5_handler.run_game();">3a: Pull all!</button> 
+	<button onclick="S5_handler.pull_game_step();">3b: Step by step</button> 
   </div>
   <div id="k-board-s5-c1" class="k-board"></div>
   <div id="k-board-s5-c2" class="k-board"></div>

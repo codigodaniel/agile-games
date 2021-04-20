@@ -1,25 +1,28 @@
 //***************
 // SECTION 5
 //***************
-/*
-find and replace:
-S5_KanbanNode
-S5_KanbanColumn
-S5_TicketsHandler
-s5_handler
-*/
 
-class S5_KanbanNode{
-    next = null;
-    id = 0;
+class S5_SectionElement{
     section = 5;
-    element_id = '';
-    left = '';
-    top = '';
+}
+
+class S5_Node extends S5_SectionElement{
+    id = 0;
+    next_node = null;
 
     constructor(id){
+        super();
         this.id = id;
     }
+
+    count(number = 0){
+        if(this.next_node){
+            return this.next_node.count(number + 1);
+        }else{
+            return number;
+        }
+    }
+
     insert(ticket){
         if (!this.next_node){
             this.next_node = ticket;
@@ -28,13 +31,17 @@ class S5_KanbanNode{
         }
     }
 
-    count(number){
-        if(this.next_node){
-            return this.next_node.count(number + 1);
-        }else{
-            return number;
-        }
+}
+
+class S5_KanbanNode extends S5_Node{
+    element_id = '';
+    left = '';
+    top = '';
+
+    constructor(id){
+        super(id);
     }
+
     init_html(board_id){
         if(this.next_node){
             this.next_node.init_html(board_id);
@@ -63,23 +70,20 @@ class S5_KanbanNode{
           top: this.top,
           //backgroundColor: this.backgroundColor,
           //borderRadius: [this.borderRadius, this.borderRadiusTo],
-          easing: 'easeInOutQuad'
+//          easing: 'easeInOutQuad'
         });
     }
 }
 
-class S5_KanbanColumn{
-    section = 5;
+class S5_KanbanColumn  extends S5_Node{
     backlog_size = 10;
-    column_number;
-    next_node = null;
     board_id;
     position_x;
 
-    constructor(number, position_x){
-        this.column_number = number;
+    constructor(id, position_x){
+        super(id);
         this.position_x = position_x;
-        this.board_id = "k-board-s"+this.section+"-c"+this.column_number;
+        this.board_id = "k-board-s"+this.section+"-c"+this.id;
     }
 
     init_load_nodes(){
@@ -90,7 +94,7 @@ class S5_KanbanColumn{
     }
 
     init_html(){
-        document.getElementById(this.board_id).innerHTML = null;
+        document.getElementById(this.board_id).innerHTML = '';
         if(this.next_node){
             this.next_node.init_html(this.board_id);
         }
@@ -102,15 +106,6 @@ class S5_KanbanColumn{
         }
     }
 
-    insert(ticket){
-        if (!this.next_node){
-            this.next_node = ticket;
-        }else{
-            this.next_node.insert(ticket);
-        }
-        
-    }
-
     extract_FIFO(){
         let n = this.next_node;
         if(n){
@@ -120,28 +115,34 @@ class S5_KanbanColumn{
         return n;
     }
 
-    count(){
-        if(this.next_node){
-            return this.next_node.count(1);
-        }else{
-            return 0;
-        }
-    }
-
     extract(){
         return  this.next_node;
     }
 }
 
-class S5_TicketsHandler{
-    section = 5;
-    backlog = new S5_KanbanColumn(1,3);
-    wip =  new S5_KanbanColumn(2,316);
-    done =  new S5_KanbanColumn(3,636);
-    step_delay = 900; 
+class S5_TicketsHandler  extends S5_SectionElement{
+    backlog;
+    wip;
+    done;
+    step_delay = 500; 
 
     constructor(){
+        super();
+        this.reset_columns();
         this.backlog.init_load_nodes();
+        this.board_id = 'k-board-s'+this.section+'-c1';
+    }
+
+    restart(){
+        this.reset_columns();
+        this.backlog.init_load_nodes();
+        this.init_html();
+    }
+
+    reset_columns(){
+        this.backlog = new S5_KanbanColumn(1,3);
+        this.wip =  new S5_KanbanColumn(2,316);
+        this.done =  new S5_KanbanColumn(3,636);
     }
 
     init_html(){
@@ -180,24 +181,25 @@ class S5_TicketsHandler{
         let n = this.wip.extract_FIFO();
         if(n){
             this.done.insert(n);
+            this.pull_to_wip();
         }else{
             n = this.pull_to_wip();
         }
         return n;
     }
 
-//*******************
-//      SETUP
-//*******************
     init_section(){
-        s5_handler.board_id = 'k-board-s'+this.section+'-c1';
-        s5_handler.init_html();
+        this.init_html();
     }
 
-    run_game(argument) {
+    run_game() {
         this.pull_game(this);
     }
 
 }
 
-var s5_handler = new S5_TicketsHandler();
+//*******************
+//      SETUP
+//*******************
+
+var S5_handler = new S5_TicketsHandler();
