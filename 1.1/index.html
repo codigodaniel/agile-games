@@ -13,8 +13,7 @@
 
 	<link rel="stylesheet" href="kanban/kanban.css" id="theme">
 	<script type="text/javascript"  src="kanban/env/tools.js"></script>
-	<script type="text/javascript"  src="kanban/kanban.js"></script>
-	<script type="text/javascript"  src="kanban/kanban-s4.js"></script>
+	<script type="text/javascript"  src="kanban/kanban-s1.js"></script>
 
 	</head>
 	<body>
@@ -23,93 +22,12 @@
 				<section>
 					<h1>Welcome to Schwarz IT - Kanban Game</h1>
 				</section>
+
 				<section>
-					<h2>Kanban Game</h2>
-					<div>
-						<button>reset backlog</button>
-<input name="method" id="method-pull" type="radio"> <label for="method-pull"> Pull </label>
-<input name="method" id="method-push" type="radio"> <label for="method-push"> Push </label>
-<button>Start!</button>
-
-					</div>
-					<table>
-						<thead>
-							<tr>
-								<th>
-								</th>
-								<th>
-<button>+ lane</button>
-<button>- lane</button>
-<br>
-WIP limit: <input type="text" size="1" disabled="true" id="kanban-game-wip" value="infinite"/>  
-<button onclick="g_kanban.change_wip();">+</button> <button onclick="g_kanban.change_wip(-1);">-</button> 
-<br>
-Discard policy: 
-
-								</th>
-								<th>Outcome</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>Backlog</td>
-								<td>
-									Swimlane 1: 
-<br>
-									<button onclick="g_kanban.change_swimlane_policy(1);">+</button> 
-									<button onclick="g_kanban.change_swimlane_policy(1,-1);">-</button> 
-									size < <span id="kanban-game-lane-1">1</span>
-									<br>
-									Swimlane 2: 
-<br>
-									<button onclick="g_kanban.change_swimlane_policy(2);">+</button> 
-									<button onclick="g_kanban.change_swimlane_policy(2,-1);">-</button> 
-									size < <span id="kanban-game-lane-2">1</span>
-									<br>
-									Swimlane 3: 
-<br>
-									<button onclick="g_kanban.change_swimlane_policy(3);">+</button> 
-									<button onclick="g_kanban.change_swimlane_policy(3,-1);">-</button> 
-									size < <span id="kanban-game-lane-3">1</span>
-									<br>
-								</td>
-								<td>
-									value per week
-									time to market
-									
-								</td>
-							</tr>
-						</tbody>
-					</table>
-
-				</section>
-				<section>
-				Flow animation
-  <div class="demo-content css-prop-demo">
-    <div class="large_square shadow"></div>
-    <div class="large_square el" style=""></div>
-  </div>
-
-<button onclick="g_pipeline.move_right();">animate</button> 
-<button onclick="g_pipeline.move_left();">back</button> 
-
-				</section>
-				<section>
-					<h3>Section 3</h3>
+					<h3>Section 1</h3>
   <div  class="">
-	<button onclick="init_section_3();">Setup Board</button> 
-	<button onclick="run_game_section_3_to_wip();">to wip</button> 
-	<button onclick="run_game_section_3_to_done();">to done</button> 
-  </div>
-  <div id="k-board-s3" class="k-board"></div>
-  <div id="k-board-s3-c2" class="k-board"></div>
-  <div id="k-board-s3-c3" class="k-board"></div>
-				</section>
-				<section>
-					<h3>Section 4</h3>
-  <div  class="">
-	<button onclick="s4_handler.restart();">1: Reset Board</button> 
-	<select id="k-select-wip-s4" onchange="s4_handler.wip.wip_limit = this.value;">
+	<button onclick="S1_handler.restart();">1: Reset Board</button> 
+	<select id="k-select-wip-s1" onchange="S1_handler.wip.wip_limit = this.value;">
 		<option value="1">2: WIP limit = 1</option>
 		<option value="2">2: WIP limit = 2</option>
 		<option value="3">2: WIP limit = 3</option>
@@ -117,12 +35,12 @@ Discard policy:
 		<option value="8">2: WIP limit = 8</option>
 		<option value="100" selected="true">2: NO WIP limit!</option>
 	</select>
-	<button onclick="s4_handler.run_game();">3: Pull all!</button> 
-	<button onclick="s4_handler.pull_game_step();">3b: Step by step</button> 
+	<button onclick="S1_handler.run_game();">3: Pull all!</button> 
+	<button onclick="S1_handler.pull_game_step();">3b: Step by step</button> 
   </div>
-  <div id="k-board-s4-c1" class="k-board"></div>
-  <div id="k-board-s4-c2" class="k-board"></div>
-  <div id="k-board-s4-c3" class="k-board"></div>
+  <div id="k-board-s1-c1" class="k-board"></div>
+  <div id="k-board-s1-c2" class="k-board"></div>
+  <div id="k-board-s1-c3" class="k-board"></div>
 				</section>
 			</div>
 		</div>

@@ -1,12 +1,12 @@
 //***************
-// SECTION 4
+// SECTION 1
 //***************
 
-class S4_SectionElement{
-    section = 4;
+class S1_SectionElement{
+    section = 1;
 }
 
-class S4_Node extends S4_SectionElement{
+class S1_Node extends S1_SectionElement{
     id = 0;
     next_node = null;
 
@@ -33,7 +33,7 @@ class S4_Node extends S4_SectionElement{
 
 }
 
-class S4_KanbanNode extends S4_Node{
+class S1_KanbanNode extends S1_Node{
     element_id = '';
     left = '';
     top = '';
@@ -87,7 +87,7 @@ class S4_KanbanNode extends S4_Node{
 
 }
 
-class S4_KanbanColumn  extends S4_Node{
+class S1_KanbanColumn  extends S1_Node{
     backlog_size = 10;
     board_id;
     position_x;
@@ -104,7 +104,7 @@ class S4_KanbanColumn  extends S4_Node{
 
     init_load_nodes(){
         for (var i = 1; i <=  this.backlog_size ; i++) {
-            let n = new S4_KanbanNode(i);
+            let n = new S1_KanbanNode(i);
             this.insert(n);
         }
     }
@@ -164,7 +164,7 @@ class S4_KanbanColumn  extends S4_Node{
 
 }
 
-class S4_TicketsHandler  extends S4_SectionElement{
+class S1_TicketsHandler  extends S1_SectionElement{
     backlog;
     wip;
     done;
@@ -187,15 +187,15 @@ class S4_TicketsHandler  extends S4_SectionElement{
     }
 
     reset_columns(){
-        this.backlog = new S4_KanbanColumn(1,3);
-        this.wip =  new S4_KanbanColumn(2,316);
-        this.done =  new S4_KanbanColumn(3,636);
+        this.backlog = new S1_KanbanColumn(1,3);
+        this.wip =  new S1_KanbanColumn(2,316);
+        this.done =  new S1_KanbanColumn(3,636);
     }
 
     init_html(){
         this.backlog.init_html();
         this.backlog.arrange_backlog();
-        document.getElementById("k-select-wip-s4").value = 100;
+        document.getElementById("k-select-wip-s"+this.section).value = 100;
     }
 
     update_board(){
@@ -256,4 +256,4 @@ class S4_TicketsHandler  extends S4_SectionElement{
 //      SETUP
 //*******************
 
-var s4_handler = new S4_TicketsHandler();
+var S1_handler = new S1_TicketsHandler();
