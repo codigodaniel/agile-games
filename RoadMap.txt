@@ -28,6 +28,23 @@ show process capacity
 + show users icons to represent the team size 
 
 ***********
+1.1
+***********
+-------------------
+Concepts to explain
+-------------------
++ feeling of "progress"
+--------
+Features
+--------
++ timer to show time
++ animation for the process 
+--------
+Bugs
+--------
++ only one thread / disable play button 
+
+***********
 2.0 
 ***********
 -------------------
@@ -35,6 +52,7 @@ Concepts to explain
 -------------------
 transparency
 pull 
+different sizes
 
 --------
 Features

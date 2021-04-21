@@ -1,0 +1,6 @@
+* optional slides in the presentation
+
++ presentation mode vs study 
+
++ open speaker notes (plugin notes.js) 
+
