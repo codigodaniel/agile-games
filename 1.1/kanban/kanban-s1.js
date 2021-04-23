@@ -42,7 +42,7 @@ class S1_KanbanNode extends S1_Node{
     element_id = '';
     left = '';
     top = '';
-    to_do = 2;
+    to_do = 1;
     age = 0;
 
     constructor(id){
@@ -93,7 +93,7 @@ class S1_KanbanNode extends S1_Node{
 }
 
 class S1_KanbanColumn  extends S1_Node{
-    backlog_size = 10;
+    backlog_size = 5;
     board_id;
     position_x;
     wip_limit = 100;
@@ -174,21 +174,22 @@ class S1_TicketsHandler  extends S1_SectionElement{
     wip;
     done;
     thread; 
-    step_delay = 500; 
+    step_delay = 200; 
+    time_start;
+    time_end;
 
     constructor(){
         super();
         this.reset_columns();
-        //this.backlog.init_load_nodes();
         this.board_id = 'k-board-s'+this.section+'-c1';
         this.thread = new Thread(this);
+        this.thread.step_delay = this.step_delay;
     }
-
 
     reset_columns(){
         this.backlog = new S1_KanbanColumn(1,3);
-        this.wip =  new S1_KanbanColumn(2,316);
-        this.done =  new S1_KanbanColumn(3,636);
+        this.wip =  new S1_KanbanColumn(2,128);
+        this.done =  new S1_KanbanColumn(3,255);
     }
 
     init_html(){
@@ -207,6 +208,7 @@ class S1_TicketsHandler  extends S1_SectionElement{
 
     start_game(self){
         if(!this.thread.is_active()){
+            this.time_start = 3;
             this.thread.start();
         }
     }
@@ -227,7 +229,9 @@ class S1_TicketsHandler  extends S1_SectionElement{
         return rest >0;
     }
     last_step(){
-        t("game over");
+        this.time_end = 8;
+
+        document.getElementById('k-board-s1-logs').innerHTML += '<p>Seconds:'+(this.time_end-this.time_start)+'</p>';
     }
 
 /*  */
