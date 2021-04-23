@@ -2,6 +2,11 @@
 // SECTION 1
 //***************
 
+/* Dependencies
+Thread
+*/
+
+
 class S1_SectionElement{
     section = 1;
 }
@@ -168,23 +173,17 @@ class S1_TicketsHandler  extends S1_SectionElement{
     backlog;
     wip;
     done;
+    thread; 
     step_delay = 500; 
-    play = false;
 
     constructor(){
         super();
         this.reset_columns();
         //this.backlog.init_load_nodes();
         this.board_id = 'k-board-s'+this.section+'-c1';
+        this.thread = new Thread(this);
     }
 
-    restart(){
-        this.play = false;
-        this.reset_columns();
-        this.backlog.init_load_nodes();
-        this.init_html();
-        this.wip.wip_limit = 100;
-    }
 
     reset_columns(){
         this.backlog = new S1_KanbanColumn(1,3);
@@ -204,18 +203,34 @@ class S1_TicketsHandler  extends S1_SectionElement{
         this.done.arrange_backlog();
     }
 
-    pull_game(self){
-        if(this.play){
-            if(!self.wip.switch_cost()) self.wip.work();
-            self.pull_to_done();
-            self.pull_to_wip();
-            self.update_board();
-        }
-        let rest = self.backlog.count() + self.wip.count();
-        if(rest && this.play){
-            setTimeout(function(){ return self.pull_game(self); },self.step_delay);
+/* THREAD */
+
+    start_game(self){
+        if(!this.thread.is_active()){
+            this.thread.start();
         }
     }
+
+    restart(){
+        this.thread.stop();
+        this.reset_columns();
+        this.backlog.init_load_nodes();
+        this.init_html();
+        this.wip.wip_limit = 100;
+    }
+
+    step(){
+        this.pull_game_step();
+    }
+    is_not_done(){
+        let rest = this.backlog.count() + this.wip.count();
+        return rest >0;
+    }
+    last_step(){
+        t("game over");
+    }
+
+/*  */
 
     pull_game_step(){
         if(!this.wip.switch_cost()) this.wip.work();
@@ -243,11 +258,6 @@ class S1_TicketsHandler  extends S1_SectionElement{
 
     init_section(){
         this.init_html();
-    }
-
-    run_game() {
-        this.play = true;
-        this.pull_game(this);
     }
 
 }

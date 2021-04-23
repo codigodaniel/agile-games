@@ -1,11 +1,47 @@
 ***********
-1.0 
+0.1 
 ***********
 -------------------
 Concepts to explain
 -------------------
 
 wip limit
+
+--------
+Features
+--------
++ make js animations inside reveal.js
++ build a 3 column kanban board
++ animate a basic flow 
+
+***********
+1.1
+***********
+-------------------
+Concepts to explain
+-------------------
++ feeling of "progress"
+--------
+Features
+--------
++ design and css improvements (Lars)
++ timer to show time
++ animation for the process 
++ experimentations log 
+--------
+Bugs
+--------
++ Thread
+++ only one thread (singleton) / disable play button 
+++ callable at thread's end
+
+***********
+1.2
+***********
+-------------------
+Concepts to explain
+-------------------
+
 waste
 + how to use it
 + how it works 
@@ -26,23 +62,6 @@ ticket aging
 show process capacity 
 + team size 
 + show users icons to represent the team size 
-
-***********
-1.1
-***********
--------------------
-Concepts to explain
--------------------
-+ feeling of "progress"
---------
-Features
---------
-+ timer to show time
-+ animation for the process 
---------
-Bugs
---------
-+ only one thread / disable play button 
 
 ***********
 2.0 
