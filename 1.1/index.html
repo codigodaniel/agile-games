@@ -26,27 +26,28 @@
 
 				<section>
 					<h3>Section 1</h3>
-  <div  class="">
+  <div id="k-board-s1-c1" class="k-board"></div>
+  <div id="k-board-s1-c2" class="k-board">
+  </div>
+  <div id="k-board-s1-c3" class="k-board"></div>
+  <div  class="k-board k-menu">
 	<button onclick="S1_handler.restart();">1: Reset Board</button> 
-	<select id="k-select-wip-s1" onchange="S1_handler.wip.wip_limit = this.value;">
+	<select id="k-select-wip-s1" onchange="S1_handler.set_wip_limit(this.value);">
 		<option value="1">2: WIP limit = 1</option>
 		<option value="2">2: WIP limit = 2</option>
 		<option value="3">2: WIP limit = 3</option>
 		<option value="5">2: WIP limit = 5</option>
 		<option value="8">2: WIP limit = 8</option>
-		<option value="100" selected="true">2: NO WIP limit!</option>
+		<option value="100">2: NO WIP limit!</option>
 	</select>
-	<button onclick="S1_handler.start_game(S1_handler);">3: Pull all!</button> 
+	<button onclick="S1_handler.start_game(S1_handler);">3: Action!</button> 
 	<button onclick="S1_handler.pull_game_step();">3b: Step by step</button> 
   </div>
-  <div id="k-board-s1-c1" class="k-board"></div>
-  <div id="k-board-s1-c2" class="k-board"></div>
-  <div id="k-board-s1-c3" class="k-board"></div>
   <div id="k-board-s1-logs" class="k-board k-board-logs"></div>
 				</section>
 				<section>
 					<h3>Section 2: design screen</h3>
-					
+
 				</section>
 				<section>
 					<button onclick="">Start</button> 

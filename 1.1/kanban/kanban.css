@@ -54,12 +54,26 @@ button{
 	float:left;
 }
 
+.k-menu{
+    border: 3px dashed green;
+    width: 140px;
+}
+
 .k-ticket{
 	width: 48px;
     height: 48px;
     background-color: #FF8F42;
     position: absolute;
     margin: 2px;
+    float: left;
+}
+
+.k-kanban-kanban{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    margin: 2px;
+    border: 3px dashed yellow;
     float: left;
 }
 
@@ -72,5 +86,7 @@ button{
 
 .k-board-logs p{
     margin: 0;
-    font-size: 13px;
+    padding: 5px;
+    font-size: 16px;
+    text-align: left;
 }

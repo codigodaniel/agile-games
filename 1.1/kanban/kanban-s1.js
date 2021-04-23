@@ -93,10 +93,10 @@ class S1_KanbanNode extends S1_Node{
 }
 
 class S1_KanbanColumn  extends S1_Node{
-    backlog_size = 5;
+    backlog_size = 10;
     board_id;
     position_x;
-    wip_limit = 100;
+    wip_limit = 1;
     wasted_time = 0;
     
     /* Setup */
@@ -117,7 +117,8 @@ class S1_KanbanColumn  extends S1_Node{
     /*Html*/
 
     init_html(){
-        document.getElementById(this.board_id).innerHTML = '';
+        let board_element = document.getElementById(this.board_id);
+        board_element.innerHTML = '';
         if(this.next_node){
             this.next_node.init_html(this.board_id);
         }
@@ -128,6 +129,26 @@ class S1_KanbanColumn  extends S1_Node{
             this.next_node.align(this.position_x, 3);
         }
     }
+
+    show_boxes(){
+        let element_obj = document.getElementById("k-board-s"+this.section+"-c2");
+        element_obj.innerHTML = '';
+        for (var i = 0; i < this.wip_limit; i++) {
+            t(this.wip_limit);
+            let el_id = 'k-kanban-kanban-'+i;
+            let y = i*80;
+            element_obj.innerHTML += '<p class="k-kanban-kanban" style="top:'+y+'px;" id="'+el_id+'"></p>';
+        }
+        
+        /**
+        anime({
+          targets: '#'+el_id,
+          left: x+'px',
+          top: y+'px',
+        });
+        /**/
+    }
+
 
     /* Node handling*/
 
@@ -174,7 +195,8 @@ class S1_TicketsHandler  extends S1_SectionElement{
     wip;
     done;
     thread; 
-    step_delay = 200; 
+    board_id;
+    step_delay = 200;
     time_start;
     time_end;
 
@@ -192,10 +214,21 @@ class S1_TicketsHandler  extends S1_SectionElement{
         this.done =  new S1_KanbanColumn(3,255);
     }
 
+    set_wip_limit(value){
+        this.restart();
+        this.wip.wip_limit = value;
+        this.update_select_wip();
+    }
+
     init_html(){
         this.backlog.init_html();
         this.backlog.arrange_backlog();
-        document.getElementById("k-select-wip-s"+this.section).value = 100;
+        this.wip.show_boxes();
+        this.update_select_wip();
+    }
+
+    update_select_wip(){
+        document.getElementById("k-select-wip-s"+this.section).value = this.wip.wip_limit;
     }
 
     update_board(){
@@ -208,17 +241,17 @@ class S1_TicketsHandler  extends S1_SectionElement{
 
     start_game(self){
         if(!this.thread.is_active()){
-            this.time_start = 3;
+            this.time_start = Date.now();
             this.thread.start();
         }
     }
 
     restart(){
+
         this.thread.stop();
         this.reset_columns();
         this.backlog.init_load_nodes();
         this.init_html();
-        this.wip.wip_limit = 100;
     }
 
     step(){
@@ -228,10 +261,14 @@ class S1_TicketsHandler  extends S1_SectionElement{
         let rest = this.backlog.count() + this.wip.count();
         return rest >0;
     }
-    last_step(){
-        this.time_end = 8;
 
-        document.getElementById('k-board-s1-logs').innerHTML += '<p>Seconds:'+(this.time_end-this.time_start)+'</p>';
+    elapsed_time(){
+        return (Date.now()-this.time_start)/1000;
+    }
+
+    last_step(){
+
+        document.getElementById('k-board-s1-logs').innerHTML += '<p>Time: '+this.elapsed_time()+'s</p>';
     }
 
 /*  */
