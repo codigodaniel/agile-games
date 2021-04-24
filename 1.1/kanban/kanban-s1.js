@@ -6,7 +6,6 @@
 Thread
 */
 
-
 class S1_SectionElement{
     section = 1;
 }
@@ -86,8 +85,12 @@ class S1_KanbanNode extends S1_Node{
     work(){
         if(this.to_do){
             this.to_do--;
+            anime({
+              targets: '#'+this.element_id,
+              borderRadius: '10px',
+              backgroundColor: '#29CAA4'
+            });
         }
-        //if(this.next_node) next_node.work();
     }
 
 }
@@ -134,21 +137,11 @@ class S1_KanbanColumn  extends S1_Node{
         let element_obj = document.getElementById("k-board-s"+this.section+"-c2");
         element_obj.innerHTML = '';
         for (var i = 0; i < this.wip_limit; i++) {
-            t(this.wip_limit);
             let el_id = 'k-kanban-kanban-'+i;
-            let y = i*80;
-            element_obj.innerHTML += '<p class="k-kanban-kanban" style="top:'+y+'px;" id="'+el_id+'"></p>';
+            let y = i*51+1;
+            element_obj.innerHTML += '<div class="k-kanban-kanban" style="top:'+y+'px;" id="'+el_id+'"></div>';
         }
-        
-        /**
-        anime({
-          targets: '#'+el_id,
-          left: x+'px',
-          top: y+'px',
-        });
-        /**/
     }
-
 
     /* Node handling*/
 
@@ -215,16 +208,17 @@ class S1_TicketsHandler  extends S1_SectionElement{
     }
 
     set_wip_limit(value){
-        this.restart();
+        //this.restart();
         this.wip.wip_limit = value;
         this.update_select_wip();
+        this.wip.show_boxes();
     }
 
     init_html(){
         this.backlog.init_html();
         this.backlog.arrange_backlog();
-        this.wip.show_boxes();
         this.update_select_wip();
+        this.wip.show_boxes();
     }
 
     update_select_wip(){
@@ -247,7 +241,6 @@ class S1_TicketsHandler  extends S1_SectionElement{
     }
 
     restart(){
-
         this.thread.stop();
         this.reset_columns();
         this.backlog.init_load_nodes();
