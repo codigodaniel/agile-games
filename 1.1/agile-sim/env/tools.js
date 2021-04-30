@@ -9,3 +9,7 @@ function sleep(milliseconds) {
     currentDate = Date.now();
   } while (currentDate - date < milliseconds);
 }
+
+function write(el_id, html){
+	document.getElementById(el_id).innerHTML = html;
+}
