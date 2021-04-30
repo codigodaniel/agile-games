@@ -1,0 +1,96 @@
+***********
+1.1 
+***********
+-------------------
+Concepts to explain
+-------------------
+
++ unplanned tasks effect
++ show stakeholders how impacts on the team 
+
+--------
+Artifacts
+--------
++ backlog 
++ team 
++ board 
++ logs 
+
+--------
+Input
+--------
++ wip limit $ 
++ team size $ 
++ incidents policy $ 
+
++ team age $ 
++ discard policy $
++ ticket max size 
+
++ different scenarios 
+
+--------
+Output
+--------
++ $ team mood (bored, joy, angry, conflict, inspired, victory) 
++ $ performance: business value $$$ ROI 
+
++ technical debt
++ complexity 
++ product quality: bugs, usability, maintainability 
+
+--------
+Emotions 
+--------
+
+X |0 |1 |2 |
+2+|  |  |  |
+1=|  |neutral|  |
+0-|  |  |  |
+
+
+*************
+BRAINSTORMING 
+*************
+
+
+
+scenarios 
++ working on parallel tickets 
++ ticket size
++ flagged ticket
++ right over left (boring tasks postponed) 
++ pair programming vs individual working  
+$+ unplanned tasks 
+++ ticket by order
+++ ammount of incidents 
+++ how would you fix it? 
++++ increase wip limit $$$
++++ team composition (how many, seniority) $$
++++ incidents policy $$$
++++ discard policy $$
++++ more tickets details $$ (bss value, size, age)
++++ swimlanes 
++++ priority by
++++ add column 
++++ assignment policy
++++ pressure
+$$$ show stakeholders how impacts on the team 
+++ stats
++++ bugs defects quality $$
++++ social health
++++ mood con blog icons $$$ 
++++ ROI $$
++++ complexity
++++ commitment
++++ maintainability $$
+
+++++ fail fast and often without consequences 
++ invisible tasks 
++ external dependencies 
++ scrum  simulator 
++ pre-conditions
+++ team size
+++ more columns 
+++ why t shape is better than I shape
++ agile is a mean not an end 

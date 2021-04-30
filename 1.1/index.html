@@ -5,23 +5,26 @@
 
 		<title>Schwarz IT Javascript Agile Games</title>
 
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
 		<link rel="stylesheet" href="../reveal/dist/reset.css">
 		<link rel="stylesheet" href="../reveal/dist/reveal.css">
 		<link rel="stylesheet" href="../reveal/dist/theme/black.css" id="theme">
 
 		<script type="text/javascript"  src="http://animejs.com/lib/anime.min.js"></script>
 
-		<link rel="stylesheet" href="kanban/kanban.css" id="theme">
-		<script type="text/javascript"  src="kanban/env/tools.js"></script>
-		<script type="text/javascript"  src="kanban/env/Thread.js"></script>
-		<script type="text/javascript"  src="kanban/kanban-s1.js"></script>
+		<link rel="stylesheet" href="agile-sim/agile-games.css" id="theme">
+		<script type="text/javascript"  src="agile-sim/env/tools.js"></script>
+		<script type="text/javascript"  src="agile-sim/env/Thread.js"></script>
+		<script type="text/javascript"  src="agile-sim/kanban-s1.js"></script>
+		<script type="text/javascript"  src="agile-sim/game-02.js"></script>
 
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
 				<section>
-					<h1>Welcome to Schwarz IT - Kanban Game</h1>
+					<h1>Welcome to Schwarz IT - Agile Games on Reveal</h1>
 				</section>
 
 				<section>
@@ -46,7 +49,89 @@
   <div id="k-board-s1-logs" class="k-board k-board-logs"></div>
 				</section>
 				<section>
-					<h3>Section 2: design screen</h3>
+					Game 02: Config sim Scrum
+<div class="row">
+	<div id="team-g02" class="col-12 c-board">
+		  	<b>The Team:</b>
+  	<img src="agile-sim/img/emotions/order.gif">
+  	<img src="agile-sim/img/emotions/training1.gif">
+  	<img src="agile-sim/img/emotions/cool1.gif">
+  	<img src="agile-sim/img/emotions/bye.gif">
+
+	</div>
+
+</div>
+<div class="row">
+	<div class="col-4 c-board">
+	  	<h4>Input</h4>
+	  	<div class="row">
+		<button onclick="G02_game.reset_board();">1: Reset Board</button> 
+	  		
+	  	</div>
+	  	<div class="row">
+	  		
+		<select id="" onchange="">
+			<option value="1">2: Capacity load = 110%</option>
+			<option value="1">2: Capacity load = 70%</option>
+		</select>
+		<select id="" onchange="">
+			<option value="1">2: Team size = 4</option>
+		</select>
+		<select id="" onchange="">
+			<option value="1">2: Team age = 4</option>
+		</select>
+		<select id="" onchange="">
+			<option value="1">2: Incidents policy: All</option>
+			<option value="1">2: Incidents policy: Wait for next sprint</option>
+		</select>
+		<select id="" onchange="">
+			<option value="1">2: Discard policy: All</option>
+			<option value="1">2: Discard policy: Wait for next sprint</option>
+		</select>
+	  	</div>
+	  	<div class="row">
+	  		
+		<button onclick="">3: Action!</button> 
+		<button onclick="">3: Step by step</button> 
+	  	</div>
+	</div>
+	<div  id="config-board-g02" class="col-4 c-board">
+  		<h4>The Board</h4>
+  		<div class="row">
+  			<div class="col-3 c-board">To do</div>
+  			<div class="col-3 c-board">doing</div>
+  			<div class="col-3 c-board">test</div>
+  			<div class="col-3 c-board">done</div>
+  		</div>
+	</div>
+	<div  id="c-board-g02-logs"  class="col-4 c-board c-logs">
+  		<h4>Output</h4>
+  		<div class="row">
+  			<div class="col-6 c-board">Speed</div>
+  			<div class="col-6 c-board">20 f</div>
+  		</div>
+  		<div class="row">
+  			<div class="col-6 c-board">$ ROI $</div>
+  			<div class="col-6 c-board">1000 €</div>
+  		</div>
+  		<div class="row">
+  			<div class="col-6 c-board">Quality</div>
+  			<div class="col-6 c-board">89%</div>
+  		</div>
+  		<div class="row">
+  			<div class="col-6 c-board">Commitment</div>
+  			<div class="col-6 c-board">Strong</div>
+  		</div>
+  		<div class="row">
+  			<div class="col-6 c-board">Complexity</div>
+  			<div class="col-6 c-board">1200 p</div>
+  		</div>
+  		
+  		
+  		
+  		
+	</div>
+</div>
 
 				</section>
 				<section>
