@@ -62,11 +62,13 @@ img{
 .k-ticket{
 	width: 46px;
     height: 46px;
-    background-color: #FF8F42;
+    # background-color: #FF8F42;
     position: absolute;
     margin: 2px;
     float: left;
 }
+
+
 
 .k-kanban-kanban{
     height: 46px;
@@ -107,3 +109,42 @@ img{
 .c-logs {
     border: 3px dashed blue;
 }
+
+
+/********** BARISTA GAME ***********/
+
+.karamell-0{
+    background: url("img/barista/Karamell-0.png");
+}
+.karamell-1{
+    background: url("img/barista/Karamell-1.png");
+}
+.karamell-2{
+    background: url("img/barista/Karamell-2.png");
+}
+
+.machiato-0{
+    background: url("img/barista/Machiato-0.png");
+}
+.machiato-1{
+    background: url("img/barista/Machiato-1.png");
+}
+.machiato-2{
+    background: url("img/barista/Machiato-2.png");
+}
+.machiato-3{
+    background: url("img/barista/Machiato-3.png");
+}
+
+.k-actor{
+    width: 48px;
+    height: 48px;
+    background-color: #FF8F42;
+    position: absolute;
+    margin: 2px;
+}
+
+.k-barista-s1{
+    background: url("img/barista/Barista.png");
+}
+

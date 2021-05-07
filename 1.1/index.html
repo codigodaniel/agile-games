@@ -17,7 +17,6 @@
 		<script type="text/javascript"  src="agile-sim/env/tools.js"></script>
 		<script type="text/javascript"  src="agile-sim/env/Thread.js"></script>
 		<script type="text/javascript"  src="agile-sim/kanban-s1.js"></script>
-		<script type="text/javascript"  src="agile-sim/game-02.js"></script>
 
 	</head>
 	<body>
@@ -31,6 +30,7 @@
 					<h3>Section 1</h3>
   <div id="k-board-s1-c1" class="k-board"></div>
   <div id="k-board-s1-c2" class="k-board">
+  	
   </div>
   <div id="k-board-s1-c3" class="k-board"></div>
   <div  class="k-board k-menu">
@@ -47,115 +47,6 @@
 	<button onclick="S1_handler.pull_game_step();">3b: Step by step</button> 
   </div>
   <div id="k-board-s1-logs" class="k-board k-board-logs"></div>
-				</section>
-				<section>
-					Game 02: Config sim Scrum
-<div class="row">
-	<div id="team-g02" class="col-12 c-board">
-		  	<b>The Team:</b>
-  	<img src="agile-sim/img/emotions/order.gif">
-  	<img src="agile-sim/img/emotions/training1.gif">
-  	<img src="agile-sim/img/emotions/cool1.gif">
-  	<img src="agile-sim/img/emotions/bye.gif">
-
-	</div>
-
-</div>
-<div class="row">
-	<div class="col-4 c-board">
-	  	<h4>Input</h4>
-	  	<div class="row">
-		<button onclick="G02_game.reset_game();">1: Reset Game</button> 
-	  		
-	  	</div>
-	  	<div class="row">
-	  		
-		<select id="" onchange="G02_game.set_capacity(this.value);">
-			<option value="130">2: Capacity load = 130%</option>
-			<option value="120">2: Capacity load = 120%</option>
-			<option value="110">2: Capacity load = 110%</option>
-			<option value="100">2: Capacity load = 100%</option>
-			<option value="70">2: Capacity load = 70%</option>
-			<option value="50">2: Capacity load = 50%</option>
-			<option value="30">2: Capacity load = 30%</option>
-			<option value="15">2: Capacity load = 15%</option>
-		</select>
-		<select id="" onchange="G02_game.set_team_size(this.value);" title="How many (fulltime) team members has the team">
-			<option value="21">2: Team size = 21 developers</option>
-			<option value="13">2: Team size = 13 developers</option>
-			<option value="8">2: Team size = 8 developers</option>
-			<option value="5">2: Team size = 5 developers</option>
-			<option value="3">2: Team size = 3 developers</option>
-			<option value="2">2: Team size = 2 developers</option>
-			<option value="1">2: Team size = 1 developers</option>
-		</select>
-		<select id="" onchange="G02_game.set_team_age(this.value);" title="How long they are working together, in the same product/service.">
-			<option value="21">2: Team age = 21 months</option>
-			<option value="13">2: Team age = 13 months</option>
-			<option value="8">2: Team age = 8 months</option>
-			<option value="5">2: Team age = 5 months</option>
-			<option value="3">2: Team age = 3 months</option>
-			<option value="2">2: Team age = 2 months</option>
-			<option value="1">2: Team age = 1 months</option>
-		</select>
-		<select id="" onchange="">
-			<option value="1">2: Incidents policy: All</option>
-			<option value="1">2: Incidents policy: Wait for next sprint</option>
-		</select>
-	  	</div>
-	  	<div class="row">
-	  		
-		<button onclick="G02_game.run();">3: Action!</button> 
-	  	</div>
-	</div>
-	<div  id="config-board-g02" class="col-4 c-board">
-  		<h4>The Board</h4>
-  		<div class="row">
-  			<div class="col-3 c-board">To do</div>
-  			<div class="col-3 c-board">doing</div>
-  			<div class="col-3 c-board">test</div>
-  			<div class="col-3 c-board">done</div>
-  		</div>
-	</div>
-	<div  id="c-board-g02-logs"  class="col-4 c-board c-logs">
-  		<h4>Output</h4>
-  		<div class="row">
-  			<div class="col-6 c-board">Speed</div>
-  			<div id="o-speed-g02"  class="col-6 c-board">20 f</div>
-  		</div>
-  		<div class="row">
-  			<div class="col-6 c-board">$ ROI $</div>
-  			<div id="o-roi-g02"  class="col-6 c-board">1000 €</div>
-  		</div>
-  		<div class="row">
-  			<div class="col-6 c-board">Quality</div>
-  			<div id="o-quality-g02"  class="col-6 c-board">89%</div>
-  		</div>
-  		<div class="row">
-  			<div class="col-6 c-board">Commitment</div>
-  			<div id="o-commitment-g02" class="col-6 c-board">Strong</div>
-  		</div>
-  		<div class="row">
-  			<div class="col-6 c-board">Complexity</div>
-  			<div id="o-complexity-g02"  class="col-6 c-board">1200 p</div>
-  		</div>
-  		
-  		
-  		
-  		
-	</div>
-</div>
-
-				</section>
-				<section>
-					<button onclick="">Start</button> 
-		<div class="hero-circle">
-			<div class="hero-face">
-				<div id="hour" class="hero-hour"></div>
-				<div id="minute" class="hero-minute"></div>
-				<div id="second" class="hero-second"></div>
-			</div>
-		</div>
 				</section>
 			</div>
 		</div>

@@ -50,12 +50,16 @@ class S1_KanbanNode extends S1_Node{
 
     /* Html */
 
+    get_ticket_html(){
+        return '<div id="'+this.element_id+'" class="k-ticket">'+this.id+'</div>';
+    }
+
     init_html(board_id){
         if(this.next_node){
             this.next_node.init_html(board_id);
         }
         this.element_id = "s"+this.section + "k-ticket-"+this.id;
-        document.getElementById(board_id).innerHTML += '<div id="'+this.element_id+'" class="k-ticket">'+this.id+'</div>';
+        document.getElementById(board_id).innerHTML += this.get_ticket_html();
     }
 
     align(x,y){
@@ -90,7 +94,12 @@ class S1_KanbanNode extends S1_Node{
               borderRadius: '10px',
               backgroundColor: '#29CAA4'
             });
+            this.work_graphical_effect();
         }
+    }
+
+    work_graphical_effect(){
+
     }
 
 }
@@ -208,7 +217,6 @@ class S1_TicketsHandler  extends S1_SectionElement{
     }
 
     set_wip_limit(value){
-        //this.restart();
         this.wip.wip_limit = value;
         this.update_select_wip();
         this.wip.show_boxes();
@@ -290,14 +298,93 @@ class S1_TicketsHandler  extends S1_SectionElement{
         return n;
     }
 
-    init_section(){
-        this.init_html();
+}
+
+//*******************
+//      BARISTA game 
+//*******************
+
+class Barista extends S1_KanbanNode{
+
+    constructor(id){
+        super(id);
+        this.element_id = "k-actor-s"+this.section;
+    }
+    get_ticket_html(){
+        return '<div id="'+this.element_id+'" class="k-actor k-barista-s1"></div>';
+    }
+}
+
+class Kaffee extends S1_KanbanNode{
+    style = [];
+    to_do = 2;
+    constructor(id){
+        super(id);
+        this.style[0] = "karamell-2";
+        this.style[1] = "karamell-1";
+        this.style[2] = "karamell-0";
     }
 
+    get_ticket_html(){
+        return '<div id="'+this.element_id+'" class="k-ticket '+this.style[2]+'" ></div>';
+    }
+
+    work_graphical_effect(){
+        document.getElementById(this.element_id).classList.add(this.style[this.to_do]);
+    }
+}
+class KaffeeMachiato extends Kaffee{
+    constructor(id){
+        super(id);
+        this.to_do = 3;
+        this.style[0] = "machiato-3";
+        this.style[1] = "machiato-2";
+        this.style[2] = "machiato-1";
+        this.style[3] = "machiato-0";
+    }
+}
+
+class KaffeeQueue extends S1_KanbanColumn{
+    constructor(id, position_x){
+        super(id, position_x);
+    }
+    init_load_nodes(){
+        this.insert(new Kaffee(1));
+        this.insert(new Kaffee(2));
+        this.insert(new KaffeeMachiato(3));
+        this.insert(new KaffeeMachiato(4));
+        this.insert(new Kaffee(5));
+        this.insert(new KaffeeMachiato(6));
+        this.insert(new Kaffee(7));
+        this.insert(new KaffeeMachiato(8));
+        this.insert(new Kaffee(9));
+        this.insert(new Kaffee(10));
+    }
+}
+
+class KaffeeGame extends S1_TicketsHandler{
+    barista;
+    constructor(){
+        super();
+        this.barista = new Barista(1);
+        
+    }
+
+    init_html(){
+        super.init_html();
+        document.getElementById("k-board-s"+this.section+"-c3").innerHTML = this.barista.get_ticket_html();
+        this.barista.move(-70, 0);
+    }
+
+    reset_columns(){
+        this.backlog = new KaffeeQueue(1,3);
+        this.wip =  new KaffeeQueue(2,128);
+        this.done =  new KaffeeQueue(3,255);
+    }
 }
 
 //*******************
 //      SETUP
 //*******************
 
-var S1_handler = new S1_TicketsHandler();
+var S1_handler = new KaffeeGame();
