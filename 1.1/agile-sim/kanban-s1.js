@@ -1,6 +1,30 @@
 //***************
 // SECTION 1
 //***************
+/* CHANGES
++ charge wip list by 1 item at once
++ calculate progress rate according to wip limit 
+set work progress using wip rate 
+- move agent through wip boxes objects, instead coffees
+- convert wip boxes into objects
+
+*/
+
+/* DOC
+Barista agent logic
++ wip list loads 1 by 1 
++ agent walks through coffee wip list 
++ each coffee work from 50 to 0
++ wip 1: each step loads 10
++ wip 10: each step loads 1 (20 / wip load)
+
+
+barista work()
+barista move()
+coffees progress()
+barista work()
+barista move()
+*/
 
 /* Dependencies
 Thread
@@ -35,13 +59,35 @@ class S1_Node extends S1_SectionElement{
         }
     }
 
+    get_node_by_id(node_id){
+        if(this.id == node_id){
+             return this;
+        }else{
+            if(this.next_node) return this.next_node.get_node_by_id(node_id);
+        }
+    }
+
+    last_random_node;
+    get_random_node(){
+        if(!this.last_random_node){
+            this.last_random_node = this.next_node;
+        }else{
+            this.next_node.get_random_node();
+        }
+        return this.last_random_node;
+    }
+
+    empty(){
+        this.next_node = null;
+    }
+
 }
 
 class S1_KanbanNode extends S1_Node{
     element_id = '';
     left = '';
     top = '';
-    to_do = 1;
+    to_do = 10;
     age = 0;
 
     constructor(id){
@@ -85,21 +131,22 @@ class S1_KanbanNode extends S1_Node{
 //          easing: 'easeInOutQuad'
         });
     }
+
     /* Process Work */
-    work(){
+    work(rate = 1){
         if(this.to_do){
-            this.to_do--;
-            anime({
-              targets: '#'+this.element_id,
-              borderRadius: '10px',
-              backgroundColor: '#29CAA4'
-            });
+            this.to_do -= rate;
+            if (this.to_do < 0) this.to_do = 0;
             this.work_graphical_effect();
         }
     }
 
     work_graphical_effect(){
-
+            anime({
+              targets: '#'+this.element_id,
+              borderRadius: '10px',
+              backgroundColor: '#29CAA4'
+            });
     }
 
 }
@@ -190,6 +237,59 @@ class S1_KanbanColumn  extends S1_Node{
         return this.count() - this.wasted_time;
     }
 
+    progress_rate_by_wip_limit(){
+        return 10-this.count();
+    }
+
+}
+
+class S1_Agent extends S1_KanbanNode{
+
+    watch_item;
+    work_item;
+    worked = true;
+
+    constructor(id){
+        super(id);
+        this.element_id = "k-actor-s"+this.section;
+    }
+    get_ticket_html(){
+        return '<div id="'+this.element_id+'" class="k-actor k-barista-s'+this.section+'"></div>';
+    }
+    set_work_item(workable){
+        if(!this.work_item){
+            this.work_item = workable;
+        }else{
+            if(this.worked){
+                this.work_item = workable;
+                this.worked = false;
+            }
+        }
+        this.watch_item = workable;
+    }
+
+    back_to_default_position(){
+        this.left = "-70px";
+        this.top = "0px";
+        this.css_animate();
+    }
+    
+    work(rate = 1){
+        if(this.work_item){
+            if (this.work_item == this.watch_item) {
+                this.work_item.work(rate);
+                t(rate);
+                this.worked = true;
+            }
+        }
+    }
+
+    align(){
+        if(this.watch_item){
+            this.top = this.watch_item.top;
+        }
+        this.css_animate();
+    }
 }
 
 class S1_TicketsHandler  extends S1_SectionElement{
@@ -201,10 +301,16 @@ class S1_TicketsHandler  extends S1_SectionElement{
     step_delay = 200;
     time_start;
     time_end;
+    move_think_or_work = 0;
+    agent;
+    current_work_item;
 
     constructor(){
         super();
-        this.reset_columns();
+        this.agent = new S1_Agent();
+        this.backlog = new S1_KanbanColumn(1,3);
+        this.wip =  new S1_KanbanColumn(2,128);
+        this.done =  new S1_KanbanColumn(3,255);
         this.board_id = 'k-board-s'+this.section+'-c1';
         this.thread = new Thread(this);
         this.thread.step_delay = this.step_delay;
@@ -212,7 +318,7 @@ class S1_TicketsHandler  extends S1_SectionElement{
 
     reset_columns(){
         this.backlog = new S1_KanbanColumn(1,3);
-        this.wip =  new S1_KanbanColumn(2,128);
+        this.wip.empty();
         this.done =  new S1_KanbanColumn(3,255);
     }
 
@@ -258,6 +364,7 @@ class S1_TicketsHandler  extends S1_SectionElement{
     step(){
         this.pull_game_step();
     }
+
     is_not_done(){
         let rest = this.backlog.count() + this.wip.count();
         return rest >0;
@@ -268,23 +375,46 @@ class S1_TicketsHandler  extends S1_SectionElement{
     }
 
     last_step(){
+        let wl = 'Wip limit: ';
+        if(this.wip.wip_limit != 100){
+            wl += this.wip.wip_limit;
+        }else{
+            wl += 'none';
+        }
+        this.agent.back_to_default_position();
 
-        document.getElementById('k-board-s1-logs').innerHTML += '<p>Time: '+this.elapsed_time()+'s</p>';
+        document.getElementById('k-board-s1-logs').innerHTML += '<p>'+wl+' - Time: '+this.elapsed_time()+'s</p>';
     }
 
-/*  */
+/* PULL LOGIC */
 
     pull_game_step(){
-        if(!this.wip.switch_cost()) this.wip.work();
+        //if(!this.wip.switch_cost()) this.wip.work();
+        let action = this.agent__move_think_or_work();
+        /**/ 
+        if(action){
+            if(action == 1){
+                //work
+                this.agent.work(this.wip.progress_rate_by_wip_limit());
+            }else{
+                //move agent 
+                let nn = this.get_next_work_item();
+                this.agent.set_work_item(nn);
+            }
+        }else{
+            //think 
+        }
+        /**/
         this.pull_to_done();
-        this.pull_to_wip();
+        if(!action)this.pull_to_wip();
         this.update_board();
+        this.agent.align();
     }
 
     pull_to_wip(){
         let n;
         let ammount = this.wip.get_space();
-        for (var i = 0; i < ammount; i++) {
+        if (ammount > 0) {
             this.wip.insert(this.backlog.extract_FIFO());
         }
         return n;
@@ -298,35 +428,51 @@ class S1_TicketsHandler  extends S1_SectionElement{
         return n;
     }
 
+    get_next_work_item(work_item_id = 0){
+        let nn;
+        if(this.current_work_item){
+            if(this.current_work_item.next_node){
+                nn = this.current_work_item.next_node;
+            }else{
+                nn = this.wip.next_node;
+            }
+        }else{
+            nn = this.wip.next_node;
+        }
+        this.current_work_item = nn;
+        return nn;
+    }
+
+    agent__move_think_or_work(){
+        if(this.move_think_or_work == 3){
+            this.move_think_or_work = 0;
+        }
+        return this.move_think_or_work++;
+    }
 }
 
 //*******************
 //      BARISTA game 
 //*******************
 
-class Barista extends S1_KanbanNode{
+class Barista extends S1_Agent{
 
-    constructor(id){
-        super(id);
-        this.element_id = "k-actor-s"+this.section;
-    }
-    get_ticket_html(){
-        return '<div id="'+this.element_id+'" class="k-actor k-barista-s1"></div>';
-    }
 }
 
 class Kaffee extends S1_KanbanNode{
     style = [];
-    to_do = 2;
+    default_style = '';
     constructor(id){
         super(id);
         this.style[0] = "karamell-2";
         this.style[1] = "karamell-1";
         this.style[2] = "karamell-0";
+        this.default_style = "karamell-0";
     }
 
     get_ticket_html(){
-        return '<div id="'+this.element_id+'" class="k-ticket '+this.style[2]+'" ></div>';
+
+        return '<div id="'+this.element_id+'" class="k-ticket '+this.default_style+'" ></div>';
     }
 
     work_graphical_effect(){
@@ -336,11 +482,12 @@ class Kaffee extends S1_KanbanNode{
 class KaffeeMachiato extends Kaffee{
     constructor(id){
         super(id);
-        this.to_do = 3;
+        
         this.style[0] = "machiato-3";
         this.style[1] = "machiato-2";
         this.style[2] = "machiato-1";
         this.style[3] = "machiato-0";
+        this.default_style = "machiato-0";
     }
 }
 
@@ -367,18 +514,21 @@ class KaffeeGame extends S1_TicketsHandler{
     constructor(){
         super();
         this.barista = new Barista(1);
+        this.backlog = new KaffeeQueue(1,3);
+        this.wip =  new KaffeeQueue(2,128);
+        this.done =  new KaffeeQueue(3,255);
         
     }
 
     init_html(){
         super.init_html();
         document.getElementById("k-board-s"+this.section+"-c3").innerHTML = this.barista.get_ticket_html();
-        this.barista.move(-70, 0);
+        this.barista.back_to_default_position();
     }
 
     reset_columns(){
         this.backlog = new KaffeeQueue(1,3);
-        this.wip =  new KaffeeQueue(2,128);
+        this.wip.empty();
         this.done =  new KaffeeQueue(3,255);
     }
 }

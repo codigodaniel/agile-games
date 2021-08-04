@@ -10,13 +10,14 @@ function prepare_handler_object(){
         }
 }
 
-function instance_KanbanNode(id, to_do=3){
-    let kn = new S1_KanbanNode(1);
+function instance_KanbanNode(id, to_do=10){
+    let kn = new S1_KanbanNode(id);
     kn.to_do = to_do;
+    kn.work_graphical_effect = function(){}
     return kn;
 }
 
-describe("SECTION 4 kanban waste logic", function() {
+describe("SECTION 1 kanban waste logic", function() {
     beforeEach(function() {
         prepare_handler_object();
     });
@@ -48,17 +49,57 @@ describe("SECTION 4 kanban waste logic", function() {
     });
     it("S1_KanbanNode.work()", function() {
         let kn = instance_KanbanNode(1);
+        assert.equal(kn.to_do,10);
+        kn.work(3);
+        assert.equal(kn.to_do,7);
+        kn.work(4);
         assert.equal(kn.to_do,3);
-        kn.work();
-        assert.equal(kn.to_do,2);
-        kn.work();
-        assert.equal(kn.to_do,1);
-        kn.work();
+        kn.work(4);
         assert.equal(kn.to_do,0);
     });
+
+    it("S1_TicketsHandler.agent__move_think_or_work()", function() {
+        assert.equal(S1_handler.agent__move_think_or_work(),0);
+        assert.equal(S1_handler.agent__move_think_or_work(),1);
+        assert.equal(S1_handler.agent__move_think_or_work(),2);
+        assert.equal(S1_handler.agent__move_think_or_work(),0);
+    });
+
+    it("S1_TicketsHandler.get_node_by_id(node_id)", function() {
+        S1_handler.wip.insert(instance_KanbanNode(12));
+        S1_handler.wip.insert(instance_KanbanNode(22));
+        S1_handler.wip.insert(instance_KanbanNode(33));
+        S1_handler.wip.insert(instance_KanbanNode(43));
+        let kn = S1_handler.wip.get_node_by_id(33);
+        assert.equal(kn.id,33);
+    });
+
+    it("S1_TicketsHandler.get_next_work_item()", function() {
+        S1_handler.wip.insert(instance_KanbanNode(1));
+        S1_handler.wip.insert(instance_KanbanNode(2));
+        S1_handler.wip.insert(instance_KanbanNode(3));
+        S1_handler.wip.insert(instance_KanbanNode(4));
+        let kn = S1_handler.get_next_work_item();
+        assert.equal(kn.id,1); 
+        kn = S1_handler.get_next_work_item();
+        assert.equal(kn.id,2); 
+        kn = S1_handler.get_next_work_item();
+        assert.equal(kn.id,3); 
+        kn = S1_handler.get_next_work_item();
+        assert.equal(kn.id,4); 
+        kn = S1_handler.get_next_work_item();
+        assert.equal(kn.id,1); 
+    });
+
+    it("S1_KanbanColumn.progress_rate_by_wip_limit()", function() {
+        S1_handler.wip.wip_limit = 3;
+        let rate = S1_handler.wip.progress_rate_by_wip_limit();
+        assert.equal(rate,7);
+    });
+
 });
 
-describe("SECTION 4 pull logic", function() {
+describe("SECTION 1 pull logic", function() {
 
     beforeEach(function() {
         prepare_handler_object();
@@ -91,7 +132,7 @@ describe("SECTION 4 pull logic", function() {
         //assert.equal(list.count(), 1);
     });
 
-    it("On Pull action, and WIP Limit 3, 3 items load in wip", function() {
+    it("On Pull action, and WIP Limit 3, 1 items load in wip", function() {
         //this.pull_to_done();
         S1_handler.backlog.insert(instance_KanbanNode(1));
         S1_handler.backlog.insert(instance_KanbanNode(2));
@@ -100,12 +141,12 @@ describe("SECTION 4 pull logic", function() {
         S1_handler.backlog.insert(instance_KanbanNode(5));
         S1_handler.wip.wip_limit = 3;
         S1_handler.pull_to_wip();
-        assert.equal(S1_handler.columns_to_str(), "Backlog: 2, Wip: 3, Done: 0");
+        assert.equal(S1_handler.columns_to_str(), "Backlog: 4, Wip: 1, Done: 0");
     });
 
 });
 
-describe("SECTION 4 Node handling", function() {
+describe("SECTION 1 Node handling", function() {
 
     beforeEach(function() {
     });

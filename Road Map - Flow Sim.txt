@@ -24,13 +24,17 @@ Concepts to explain
 --------
 Features
 --------
-+ design and css improvements (Lars)
++ design and css improvements 
 + timer to show time
 + animation for the process 
 + experimentations log 
++ barista version 
++ agent movement 
+~ progress for each cup according to wip load
 --------
 Bugs
 --------
+~ Interface usability
 + Thread
 ++ only one thread (singleton) / disable play button 
 ++ callable at thread's end

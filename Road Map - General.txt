@@ -1,0 +1,11 @@
+
++ when many in progress
+++ each cup has proportional and small progress 
+++ checkout how can we make the effect with css or any other option 
+
++ explain scrum values
++ explain inspect & adapt, empiricism 
+
++ interface usability 
++ buttons styling 
++ less compiler 
