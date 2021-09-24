@@ -1,0 +1,44 @@
+.reveal .coffeemug {
+  margin-top: 0;
+  display: inline-block;
+  overflow: auto;
+  object-fit: cover;
+  position: relative;
+  width: 4rem;
+  height: 6rem;
+  border: 0.2rem solid black;
+  border-top-left-radius: 0.2rem;
+  border-top-right-radius: 0.2rem;
+  border-bottom-left-radius: 1.2rem;
+  border-bottom-right-radius: 1.2rem;
+  background-color: white;
+}
+.reveal .coffeemug.is-inline {
+  margin-top: 0;
+  display: inline-block;
+}
+.reveal .coffeemug.is-block {
+  margin-top: 2rem;
+  display: block;
+}
+.reveal .coffeemug .coffee {
+  --value: 100;
+  bottom: 0;
+  position: absolute;
+  width: 4rem;
+  height: calc(5.5rem / 100 * var(--value));
+  border-top: 0.2rem solid black;
+  background-color: #602D0A;
+}
+.reveal .coffeemug::after {
+  position: absolute;
+  top: 0.6rem;
+  left: 4.2rem;
+  width: 1.6rem;
+  height: 4rem;
+  border: 0.2rem solid black;
+  border-top-right-radius: 0.4rem;
+  border-bottom-right-radius: 0.4rem;
+  background-color: white;
+  content: "";
+}
