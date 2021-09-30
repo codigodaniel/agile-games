@@ -13,7 +13,7 @@
    version="1.1"
    id="svg52"
    sodipodi:docname="1448428.svg"
-   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+   inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)">
   <metadata
      id="metadata58">
     <rdf:RDF>
@@ -36,14 +36,14 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1853"
+     inkscape:window-width="1848"
      inkscape:window-height="1016"
      id="namedview54"
      showgrid="false"
-     inkscape:zoom="0.21852088"
-     inkscape:cx="-167.5779"
-     inkscape:cy="518.37156"
-     inkscape:window-x="67"
+     inkscape:zoom="0.077258798"
+     inkscape:cx="-5946.3237"
+     inkscape:cy="-1239.4351"
+     inkscape:window-x="72"
      inkscape:window-y="27"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg52" />
@@ -54,133 +54,164 @@
      height="469.30725"
      x="-42.121468"
      y="0.039734282"
-     inkscape:export-xdpi="7.3372359"
-     inkscape:export-ydpi="7.3372359" />
+     inkscape:export-xdpi="7.337007"
+     inkscape:export-ydpi="7.337007"
+     inkscape:export-filename="/home/daniel/development/reveal-games/resources/barista 02/Machiato-0.png" />
   <path
      d="m277.5 42.667969v85.332031h-234.667969v-85.332031l15.4375-30.875c3.613281-7.226563 11-11.792969 19.082031-11.792969h165.628907c8.082031 0 15.46875 4.566406 19.082031 11.792969zm0 0"
      fill="#3e190c"
      id="path2"
-     inkscape:export-xdpi="7.3372359"
-     inkscape:export-ydpi="7.3372359" />
+     inkscape:export-xdpi="7.337007"
+     inkscape:export-ydpi="7.337007"
+     inkscape:export-filename="/home/daniel/development/reveal-games/resources/barista 02/Machiato-0.png" />
   <path
      d="m237.488281 448h-154.644531c-10.691406 0-19.734375-7.914062-21.144531-18.515625l-40.199219-301.484375v-85.332031h277.332031v85.332031l-40.195312 301.484375c-1.414063 10.601563-10.457031 18.515625-21.148438 18.515625zm0 0"
      fill="#e8a073"
      id="path4"
-     inkscape:export-xdpi="7.3372359"
-     inkscape:export-ydpi="7.3372359" />
+     inkscape:export-xdpi="7.337007"
+     inkscape:export-ydpi="7.337007"
+     inkscape:export-filename="/home/daniel/development/reveal-games/resources/barista 02/Machiato-0.png" />
   <path
      d="m173.300781 429.484375 36.980469-277.332031c.8125-6.09375-1.046875-12.246094-5.097656-16.871094-4.050782-4.628906-9.902344-7.28125-16.050782-7.28125h-167.632812l40.199219 301.484375c1.410156 10.601563 10.453125 18.515625 21.144531 18.515625h69.3125c10.691406 0 19.734375-7.914062 21.144531-18.515625zm0 0"
      fill="#f9dcc9"
      id="path6"
-     inkscape:export-xdpi="7.3372359"
-     inkscape:export-ydpi="7.3372359" />
+     inkscape:export-xdpi="7.337007"
+     inkscape:export-ydpi="7.337007"
+     inkscape:export-filename="/home/daniel/development/reveal-games/resources/barista 02/Machiato-0.png" />
+  <path
+     sodipodi:nodetypes="cccsccssc"
+     id="path4650"
+     d="M 226.24575,408.20716 264.72733,97.851648 c 0.8125,-6.09375 -1.0469,-12.2461 -5.09766,-16.871102 -4.0508,-4.62891 -9.9026,-7.32829 -16.05076,-7.28125 H 47.425819 L 90.627105,408.20716 c 1.4102,10.60157 10.453165,18.51563 21.144525,18.51563 h 93.32956 c 10.6914,0 19.73436,-7.91406 21.14456,-18.51563 z"
+     inkscape:connector-curvature="0"
+     style="fill:#ba553c;fill-opacity:0.73429954"
+     inkscape:export-filename="/home/daniel/development/reveal-games/resources/barista 02/Machiato-0.png"
+     inkscape:export-xdpi="7.337007"
+     inkscape:export-ydpi="7.337007" />
   <path
      d="m21.5 42.667969h277.332031c11.785157 0 21.335938 9.550781 21.335938 21.332031v42.667969c0 11.78125-9.550781 21.332031-21.335938 21.332031h-277.332031c-11.78125 0-21.332031-9.550781-21.332031-21.332031v-42.667969c0-11.78125 9.550781-21.332031 21.332031-21.332031zm0 0"
      fill="#653430"
      id="path8"
-     inkscape:export-xdpi="7.3372359"
-     inkscape:export-ydpi="7.3372359" />
+     inkscape:export-xdpi="7.337007"
+     inkscape:export-ydpi="7.337007"
+     inkscape:export-filename="/home/daniel/development/reveal-games/resources/barista 02/Machiato-0.png" />
   <path
      d="m21.5 42.667969h192c11.78125 0 21.332031 9.550781 21.332031 21.332031v42.667969c0 11.78125-9.550781 21.332031-21.332031 21.332031h-192c-11.78125 0-21.332031-9.550781-21.332031-21.332031v-42.667969c0-11.78125 9.550781-21.332031 21.332031-21.332031zm0 0"
      fill="#7c534f"
      id="path10"
-     inkscape:export-xdpi="7.3372359"
-     inkscape:export-ydpi="7.3372359" />
+     inkscape:export-xdpi="7.337007"
+     inkscape:export-ydpi="7.337007"
+     inkscape:export-filename="/home/daniel/development/reveal-games/resources/barista 02/Machiato-0.png" />
   <path
      d="m64.167969 42.667969c11.78125 0 21.332031 9.550781 21.332031 21.332031v42.667969c0 11.78125-9.550781 21.332031-21.332031 21.332031-11.785157 0-21.335938-9.550781-21.335938-21.332031v-42.667969c0-11.78125 9.550781-21.332031 21.335938-21.332031zm0 0"
      fill="#93716e"
      id="path12"
-     inkscape:export-xdpi="7.3372359"
-     inkscape:export-ydpi="7.3372359" />
+     inkscape:export-xdpi="7.337007"
+     inkscape:export-ydpi="7.337007"
+     inkscape:export-filename="/home/daniel/development/reveal-games/resources/barista 02/Machiato-0.png" />
   <path
      d="m58.269531 11.792969-15.4375 30.875h149.335938c11.78125 0 21.332031-9.550781 21.332031-21.335938 0-11.78125-9.550781-21.332031-21.332031-21.332031h-114.816407c-8.082031 0-15.46875 4.566406-19.082031 11.792969zm0 0"
      fill="#653430"
      id="path14"
-     inkscape:export-xdpi="7.3372359"
-     inkscape:export-ydpi="7.3372359" />
+     inkscape:export-xdpi="7.337007"
+     inkscape:export-ydpi="7.337007"
+     inkscape:export-filename="/home/daniel/development/reveal-games/resources/barista 02/Machiato-0.png" />
   <path
      d="m21.5 192 21.332031 149.332031h234.667969l21.332031-149.332031zm0 0"
      fill="#aa644a"
      id="path16"
-     inkscape:export-xdpi="7.3372359"
-     inkscape:export-ydpi="7.3372359" />
+     inkscape:export-xdpi="7.337007"
+     inkscape:export-ydpi="7.337007"
+     inkscape:export-filename="/home/daniel/development/reveal-games/resources/barista 02/Machiato-0.png" />
   <path
      d="m21.5 192 21.332031 149.332031h128l21.335938-149.332031zm0 0"
      fill="#b77b65"
      id="path18"
-     inkscape:export-xdpi="7.3372359"
-     inkscape:export-ydpi="7.3372359" />
+     inkscape:export-xdpi="7.337007"
+     inkscape:export-ydpi="7.337007"
+     inkscape:export-filename="/home/daniel/development/reveal-games/resources/barista 02/Machiato-0.png" />
   <path
      d="m245.5 192c-76.582031 0-138.667969 62.082031-138.667969 138.667969 0 76.582031 62.085938 138.664062 138.667969 138.664062s138.667969-62.082031 138.667969-138.664062c0-76.585938-62.085938-138.667969-138.667969-138.667969zm0 192c-29.457031 0-53.332031-23.878906-53.332031-53.332031 0-29.457031 23.875-53.335938 53.332031-53.335938s53.332031 23.878907 53.332031 53.335938c0 29.453125-23.875 53.332031-53.332031 53.332031zm0 0"
      fill="#c35422"
      id="path20"
-     inkscape:export-xdpi="7.3372359"
-     inkscape:export-ydpi="7.3372359" />
+     inkscape:export-xdpi="7.337007"
+     inkscape:export-ydpi="7.337007"
+     inkscape:export-filename="/home/daniel/development/reveal-games/resources/barista 02/Machiato-0.png" />
   <path
      d="m224.167969 448c63.238281-.003906 115.097656-50.128906 117.253906-113.332031s-46.164063-116.746094-109.257813-121.0625c-63.09375-4.3125-118.253906 42.148437-124.722656 105.058593-.34375 3.964844-.609375 7.949219-.609375 12.003907 0 4.050781.269531 8.035156.609375 12 6.160156 59.839843 56.570313 105.328125 116.726563 105.332031zm21.332031-170.667969c29.457031 0 53.332031 23.878907 53.332031 53.335938 0 29.453125-23.875 53.332031-53.332031 53.332031s-53.332031-23.878906-53.332031-53.332031c0-29.457031 23.875-53.335938 53.332031-53.335938zm0 0"
      fill="#e18850"
      id="path22"
-     inkscape:export-xdpi="7.3372359"
-     inkscape:export-ydpi="7.3372359" />
+     inkscape:export-xdpi="7.337007"
+     inkscape:export-ydpi="7.337007"
+     inkscape:export-filename="/home/daniel/development/reveal-games/resources/barista 02/Machiato-0.png" />
   <path
      d="m349.152344 390.53125c5.082031-8.777344 4.757812-20.054688 7.4375-30.078125 2.59375-9.691406 8.589844-19.273437 8.589844-29.785156 0-10.507813-5.992188-20.082031-8.582032-29.773438-2.679687-10.023437-2.355468-21.296875-7.433594-30.074219-5.148437-8.902343-15.125-14.226562-22.347656-21.453124-7.222656-7.226563-12.550781-17.203126-21.449218-22.355469-8.777344-5.078125-20.054688-4.757813-30.078126-7.4375-9.695312-2.59375-19.277343-8.585938-29.789062-8.585938-10.503906 0-20.082031 5.992188-29.769531 8.582031-10.023438 2.679688-21.300781 2.355469-30.078125 7.429688-8.898438 5.152344-14.226563 15.125-21.449219 22.347656-7.226563 7.226563-17.207031 12.550782-22.355469 21.453125-5.082031 8.777344-4.757812 20.054688-7.4375 30.078125-2.59375 9.695313-8.589844 19.277344-8.589844 29.789063 0 10.503906 5.992188 20.082031 8.582032 29.769531 2.679687 10.023438 2.355468 21.296875 7.433594 30.074219 5.148437 8.902343 15.125 14.230469 22.347656 21.453125 7.222656 7.226562 12.550781 17.203125 21.449218 22.355468 8.777344 5.078126 20.054688 4.757813 30.078126 7.4375 9.695312 2.59375 19.277343 8.589844 29.789062 8.589844 10.503906 0 20.082031-5.996094 29.769531-8.585937 10.023438-2.679688 21.300781-2.351563 30.078125-7.429688 8.898438-5.148437 14.226563-15.125 21.449219-22.347656 7.226563-7.226563 17.207031-12.550781 22.355469-21.453125zm-103.652344-6.53125c-29.457031 0-53.332031-23.878906-53.332031-53.332031 0-29.457031 23.875-53.335938 53.332031-53.335938s53.332031 23.878907 53.332031 53.335938c0 29.453125-23.875 53.332031-53.332031 53.332031zm0 0"
      fill="#b80900"
      id="path24"
-     inkscape:export-xdpi="7.3372359"
-     inkscape:export-ydpi="7.3372359" />
+     inkscape:export-xdpi="7.337007"
+     inkscape:export-ydpi="7.337007"
+     inkscape:export-filename="/home/daniel/development/reveal-games/resources/barista 02/Machiato-0.png" />
   <path
      d="m325.484375 270.820312c-5.148437-8.902343-15.125-14.226562-22.347656-21.453124-7.222657-7.226563-12.550781-17.203126-21.449219-22.355469-8.777344-5.078125-20.054688-4.757813-30.078125-7.4375-5.9375-1.585938-11.855469-4.335938-17.945313-6.320313-6.089843 1.980469-12.003906 4.730469-17.933593 6.316406-10.023438 2.679688-21.300781 2.355469-30.078125 7.429688-8.898438 5.152344-14.226563 15.125-21.449219 22.347656-7.226563 7.226563-17.207031 12.550782-22.355469 21.453125-5.082031 8.777344-4.757812 20.054688-7.4375 30.078125-2.59375 9.695313-8.589844 19.277344-8.589844 29.789063 0 10.503906 5.992188 20.082031 8.582032 29.769531 2.679687 10.023438 2.355468 21.296875 7.433594 30.074219 5.148437 8.902343 15.125 14.230469 22.347656 21.453125 7.222656 7.226562 12.550781 17.203125 21.449218 22.355468 8.777344 5.078126 20.054688 4.757813 30.078126 7.4375 5.9375 1.585938 11.855468 4.339844 17.945312 6.320313 6.089844-1.980469 12.003906-4.730469 17.933594-6.316406 10.023437-2.679688 21.300781-2.351563 30.078125-7.429688 8.898437-5.148437 14.226562-15.125 21.449219-22.347656 7.226562-7.226563 17.207031-12.550781 22.355468-21.453125 5.082032-8.777344 4.757813-20.054688 7.4375-30.078125 2.59375-9.691406 8.589844-19.273437 8.589844-29.785156 0-10.507813-5.992188-20.082031-8.582031-29.773438-2.679688-10.023437-2.355469-21.296875-7.433594-30.074219zm-79.984375 113.179688c-29.457031 0-53.332031-23.878906-53.332031-53.332031 0-29.457031 23.875-53.335938 53.332031-53.335938s53.332031 23.878907 53.332031 53.335938c0 29.453125-23.875 53.332031-53.332031 53.332031zm0 0"
      fill="#e92c24"
      id="path26"
-     inkscape:export-xdpi="7.3372359"
-     inkscape:export-ydpi="7.3372359" />
+     inkscape:export-xdpi="7.337007"
+     inkscape:export-ydpi="7.337007"
+     inkscape:export-filename="/home/daniel/development/reveal-games/resources/barista 02/Machiato-0.png" />
   <path
      d="m170.832031 341.332031c0 35.347657 28.65625 64 64 64 35.347657 0 64-28.652343 64-64 0-1.824219-.386719-3.542969-.535156-5.332031-2.738281 27.898438-26.65625 48.886719-54.671875 47.972656-28.015625-.914062-50.515625-23.414062-51.429688-51.429687-.914062-28.019531 20.070313-51.933594 47.96875-54.671875-1.785156-.148438-3.503906-.539063-5.332031-.539063-35.34375 0-64 28.65625-64 64zm0 0"
      fill="#b80900"
      id="path28"
-     inkscape:export-xdpi="7.3372359"
-     inkscape:export-ydpi="7.3372359" />
+     inkscape:export-xdpi="7.337007"
+     inkscape:export-ydpi="7.337007"
+     inkscape:export-filename="/home/daniel/development/reveal-games/resources/barista 02/Machiato-0.png" />
   <path
      d="m266.832031 256c-2.828125 0-5.542969-1.121094-7.542969-3.121094-2-2.003906-3.125-4.714844-3.121093-7.546875v-21.332031c.003906-5.886719 4.777343-10.65625 10.664062-10.65625s10.664063 4.769531 10.667969 10.65625v21.332031c0 2.832031-1.121094 5.542969-3.121094 7.546875-2.003906 2-4.714844 3.121094-7.546875 3.121094zm0 0"
      fill="#3e190c"
      id="path30"
-     inkscape:export-xdpi="7.3372359"
-     inkscape:export-ydpi="7.3372359" />
+     inkscape:export-xdpi="7.337007"
+     inkscape:export-ydpi="7.337007"
+     inkscape:export-filename="/home/daniel/development/reveal-games/resources/barista 02/Machiato-0.png" />
   <path
      d="m138.832031 320c-2.828125 0-5.542969-1.121094-7.542969-3.121094-2-2.003906-3.125-4.714844-3.121093-7.546875v-21.332031c.003906-5.886719 4.777343-10.65625 10.664062-10.65625s10.664063 4.769531 10.667969 10.65625v21.332031c0 2.832031-1.121094 5.542969-3.121094 7.546875-2.003906 2-4.714844 3.121094-7.546875 3.121094zm0 0"
      fill="#653430"
      id="path32"
-     inkscape:export-xdpi="7.3372359"
-     inkscape:export-ydpi="7.3372359" />
+     inkscape:export-xdpi="7.337007"
+     inkscape:export-ydpi="7.337007"
+     inkscape:export-filename="/home/daniel/development/reveal-games/resources/barista 02/Machiato-0.png" />
   <path
      d="m181.5 277.332031c-4.3125 0-8.203125-2.597656-9.851562-6.582031-1.652344-3.988281-.738282-8.574219 2.308593-11.625l21.335938-21.332031c4.164062-4.167969 10.917969-4.167969 15.082031 0 4.164062 4.164062 4.164062 10.917969 0 15.082031l-21.332031 21.332031c-2 2.003907-4.714844 3.128907-7.542969 3.125zm0 0"
      fill="#653430"
      id="path34"
-     inkscape:export-xdpi="7.3372359"
-     inkscape:export-ydpi="7.3372359" />
+     inkscape:export-xdpi="7.337007"
+     inkscape:export-ydpi="7.337007"
+     inkscape:export-filename="/home/daniel/development/reveal-games/resources/barista 02/Machiato-0.png" />
   <path
      d="m330.832031 277.332031h-21.332031c-5.890625 0-10.667969-4.773437-10.667969-10.664062s4.777344-10.667969 10.667969-10.667969h21.332031c5.890625 0 10.667969 4.777344 10.667969 10.667969s-4.777344 10.664062-10.667969 10.664062zm0 0"
      fill="#3e190c"
      id="path36"
-     inkscape:export-xdpi="7.3372359"
-     inkscape:export-ydpi="7.3372359" />
+     inkscape:export-xdpi="7.337007"
+     inkscape:export-ydpi="7.337007"
+     inkscape:export-filename="/home/daniel/development/reveal-games/resources/barista 02/Machiato-0.png" />
   <path
      d="m245.5 448c-2.828125.003906-5.542969-1.121094-7.542969-3.125l-21.332031-21.332031c-4.160156-4.167969-4.160156-10.917969.003906-15.082031 4.164063-4.164063 10.914063-4.164063 15.078125-.003907l21.335938 21.335938c3.046875 3.050781 3.960937 7.636719 2.308593 11.621093-1.648437 3.988282-5.539062 6.585938-9.851562 6.585938zm0 0"
      fill="#3e190c"
      id="path38"
-     inkscape:export-xdpi="7.3372359"
-     inkscape:export-ydpi="7.3372359" />
+     inkscape:export-xdpi="7.337007"
+     inkscape:export-ydpi="7.337007"
+     inkscape:export-filename="/home/daniel/development/reveal-games/resources/barista 02/Machiato-0.png" />
   <path
      d="m181.5 426.667969h-21.332031c-5.890625 0-10.667969-4.777344-10.667969-10.667969s4.777344-10.667969 10.667969-10.667969h21.332031c5.894531-.003906 10.675781 4.773438 10.675781 10.667969s-4.78125 10.671875-10.675781 10.667969zm0 0"
      fill="#653430"
      id="path40"
-     inkscape:export-xdpi="7.3372359"
-     inkscape:export-ydpi="7.3372359" />
+     inkscape:export-xdpi="7.337007"
+     inkscape:export-ydpi="7.337007"
+     inkscape:export-filename="/home/daniel/development/reveal-games/resources/barista 02/Machiato-0.png" />
   <g
      fill="#3e190c"
      id="g50"
-     inkscape:export-xdpi="7.3372359"
-     inkscape:export-ydpi="7.3372359">
+     inkscape:export-xdpi="7.337007"
+     inkscape:export-ydpi="7.337007"
+     inkscape:export-filename="/home/daniel/development/reveal-games/resources/barista 02/Machiato-0.png">
     <path
        d="m352.167969 384c-2.832031.003906-5.546875-1.121094-7.542969-3.125l-21.332031-21.332031c-4.167969-4.167969-4.167969-10.917969 0-15.085938 4.164062-4.164062 10.917969-4.164062 15.082031 0l21.332031 21.335938c3.050781 3.050781 3.964844 7.636719 2.3125 11.621093-1.648437 3.988282-5.539062 6.585938-9.851562 6.585938zm0 0"
        id="path42" />
@@ -201,123 +232,320 @@
      width="469.30728"
      id="rect870"
      style="opacity:1;fill:none;fill-opacity:1;stroke:#000001;stroke-width:2.04955697;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:6.14867066, 6.14867066;stroke-dashoffset:0;stroke-opacity:0.97071078"
-     inkscape:export-xdpi="7.3372359"
-     inkscape:export-ydpi="7.3372359" />
-  <path
-     id="path872"
-     d="M -232.86247,42.667969 V 128 H -467.53043 V 42.667969 l 15.4375,-30.875 C -448.47965,4.566406 -441.09293,0 -433.0109,0 h 165.6289 c 8.08203,0 15.46875,4.566406 19.08203,11.792969 z m 0,0"
-     inkscape:connector-curvature="0"
-     style="fill:#3e190c"
-     inkscape:export-xdpi="7.3372359"
-     inkscape:export-ydpi="7.3372359" />
+     inkscape:export-xdpi="7.337007"
+     inkscape:export-ydpi="7.337007"
+     inkscape:export-filename="/home/daniel/development/reveal-games/resources/barista 02/Machiato-1.png" />
   <path
      id="path874"
      d="m -272.87419,448 h -154.64452 c -10.69141,0 -19.73438,-7.91406 -21.14453,-18.51563 L -488.86246,128 V 42.667969 h 277.33202 V 128 l -40.19531,301.48437 C -253.13982,440.08594 -262.18278,448 -272.87419,448 Z m 0,0"
      inkscape:connector-curvature="0"
      style="fill:#e8a073"
-     inkscape:export-xdpi="7.3372359"
-     inkscape:export-ydpi="7.3372359" />
+     inkscape:export-xdpi="7.337007"
+     inkscape:export-ydpi="7.337007"
+     inkscape:export-filename="/home/daniel/development/reveal-games/resources/barista 02/Machiato-1.png" />
   <path
      id="path876"
      d="m -337.06169,429.48437 36.98047,-277.33203 c 0.8125,-6.09375 -1.04688,-12.24609 -5.09766,-16.87109 C -309.22966,130.65234 -315.08122,128 -321.22966,128 h -167.6328 l 40.19922,301.48437 C -447.25309,440.08594 -438.21012,448 -427.51871,448 h 69.31249 c 10.6914,0 19.73437,-7.91406 21.14453,-18.51563 z m 0,0"
      inkscape:connector-curvature="0"
      style="fill:#f9dcc9"
-     inkscape:export-xdpi="7.3372359"
-     inkscape:export-ydpi="7.3372359" />
+     inkscape:export-xdpi="7.337007"
+     inkscape:export-ydpi="7.337007"
+     inkscape:export-filename="/home/daniel/development/reveal-games/resources/barista 02/Machiato-1.png" />
   <path
-     id="path878"
-     d="m -488.86246,42.667969 h 277.33202 c 11.78516,0 21.33594,9.550781 21.33594,21.332031 v 42.66797 c 0,11.78125 -9.55078,21.33203 -21.33594,21.33203 h -277.33202 c -11.78124,0 -21.33202,-9.55078 -21.33202,-21.33203 V 64 c 0,-11.78125 9.55078,-21.332031 21.33202,-21.332031 z m 0,0"
+     style="fill:#711f21;fill-opacity:1;stroke-width:0.88691831"
      inkscape:connector-curvature="0"
-     style="fill:#653430"
-     inkscape:export-xdpi="7.3372359"
-     inkscape:export-ydpi="7.3372359" />
-  <path
-     id="path880"
-     d="m -488.86246,42.667969 h 191.99999 c 11.78125,0 21.33203,9.550781 21.33203,21.332031 v 42.66797 c 0,11.78125 -9.55078,21.33203 -21.33203,21.33203 h -191.99999 c -11.78124,0 -21.33202,-9.55078 -21.33202,-21.33203 V 64 c 0,-11.78125 9.55078,-21.332031 21.33202,-21.332031 z m 0,0"
-     inkscape:connector-curvature="0"
-     style="fill:#7c534f"
-     inkscape:export-xdpi="7.3372359"
-     inkscape:export-ydpi="7.3372359" />
-  <path
-     id="path882"
-     d="m -446.19449,42.667969 c 11.78125,0 21.33203,9.550781 21.33203,21.332031 v 42.66797 c 0,11.78125 -9.55078,21.33203 -21.33203,21.33203 -11.78516,0 -21.33594,-9.55078 -21.33594,-21.33203 V 64 c 0,-11.78125 9.55078,-21.332031 21.33594,-21.332031 z m 0,0"
-     inkscape:connector-curvature="0"
-     style="fill:#93716e"
-     inkscape:export-xdpi="7.3372359"
-     inkscape:export-ydpi="7.3372359" />
-  <path
-     id="path884"
-     d="m -452.09293,11.792969 -15.4375,30.875 h 149.33593 c 11.78125,0 21.33203,-9.550781 21.33203,-21.335938 C -296.86247,9.550781 -306.41325,0 -318.1945,0 h -114.8164 c -8.08203,0 -15.46875,4.566406 -19.08203,11.792969 z m 0,0"
-     inkscape:connector-curvature="0"
-     style="fill:#653430"
-     inkscape:export-xdpi="7.3372359"
-     inkscape:export-ydpi="7.3372359" />
+     d="m -284.11672,412.15795 38.48158,-244.1331 c 0.8125,-4.7935 -1.0469,-9.63308 -5.09766,-13.27122 -4.0508,-3.64121 -9.9026,-5.76461 -16.05076,-5.72761 h -196.15308 l 43.20128,263.13193 c 1.4102,8.33945 10.45316,14.56484 21.14452,14.56484 h 93.32956 c 10.6914,0 19.73436,-6.22539 21.14456,-14.56484 z"
+     id="path4648"
+     sodipodi:nodetypes="cccsccssc"
+     inkscape:export-filename="/home/daniel/development/reveal-games/resources/barista 02/Machiato-1.png"
+     inkscape:export-xdpi="7.337007"
+     inkscape:export-ydpi="7.337007" />
   <path
      id="path886"
      d="m -488.86246,192 21.33203,149.33203 h 234.66796 L -211.53044,192 Z m 0,0"
      inkscape:connector-curvature="0"
      style="fill:#aa644a"
-     inkscape:export-xdpi="7.3372359"
-     inkscape:export-ydpi="7.3372359" />
+     inkscape:export-xdpi="7.337007"
+     inkscape:export-ydpi="7.337007"
+     inkscape:export-filename="/home/daniel/development/reveal-games/resources/barista 02/Machiato-1.png" />
   <path
      id="path888"
      d="m -488.86246,192 21.33203,149.33203 h 127.99999 L -318.1945,192 Z m 0,0"
      inkscape:connector-curvature="0"
      style="fill:#b77b65"
-     inkscape:export-xdpi="7.3372359"
-     inkscape:export-ydpi="7.3372359" />
+     inkscape:export-xdpi="7.337007"
+     inkscape:export-ydpi="7.337007"
+     inkscape:export-filename="/home/daniel/development/reveal-games/resources/barista 02/Machiato-1.png" />
   <rect
      style="opacity:1;fill:none;fill-opacity:1;stroke:#000001;stroke-width:2.04955697;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:6.14867066, 6.14867066;stroke-dashoffset:0;stroke-opacity:0.97071078"
      id="rect1026"
      width="469.30728"
      height="469.30725"
-     x="-1062.8469"
-     y="0.039734282"
-     inkscape:export-xdpi="7.3372359"
-     inkscape:export-ydpi="7.3372359" />
+     x="176.11143"
+     y="-1755.3624"
+     inkscape:export-xdpi="7.3372331"
+     inkscape:export-ydpi="7.3372331"
+     transform="rotate(-90)"
+     inkscape:export-filename="/home/daniel/development/reveal-games/resources/barista 02/Machiato-5.png" />
   <path
      style="fill:#e8a073"
      inkscape:connector-curvature="0"
-     d="m -783.23663,448 h -154.64452 c -10.69141,0 -19.73437,-7.91406 -21.14457,-18.51563 L -999.22494,128 V 42.667969 h 277.33206 V 128 l -40.19531,301.48437 C -763.50226,440.08594 -772.54522,448 -783.23663,448 Z m 0,0"
+     d="m -1473.7282,-197.45841 h -154.645 c -10.6914,0 -19.7344,-7.91406 -21.1446,-18.51563 l -40.1993,-301.48437 v -85.33202 h 277.3328 v 85.33202 l -40.1955,301.48437 c -1.414,10.60157 -10.457,18.51563 -21.1484,18.51563 z m 0,0"
      id="path1030"
-     inkscape:export-xdpi="7.3372359"
-     inkscape:export-ydpi="7.3372359" />
+     inkscape:export-xdpi="7.3372331"
+     inkscape:export-ydpi="7.3372331"
+     inkscape:export-filename="/home/daniel/development/reveal-games/resources/barista 02/Machiato-5.png" />
   <path
      style="fill:#f9dcc9"
      inkscape:connector-curvature="0"
-     d="m -847.42413,429.48437 36.98047,-277.33203 c 0.8125,-6.09375 -1.04688,-12.24609 -5.09766,-16.87109 C -819.5921,130.65234 -825.44366,128 -831.5921,128 h -167.63284 l 40.19922,301.48437 C -957.61552,440.08594 -948.57256,448 -937.88115,448 h 69.31249 c 10.6914,0 19.73437,-7.91406 21.14453,-18.51563 z m 0,0"
+     d="m -1537.9159,-215.97404 36.9806,-277.33203 c 0.8125,-6.09375 -1.0469,-12.24609 -5.0977,-16.87109 -4.0508,-4.62891 -9.9024,-7.28125 -16.0508,-7.28125 h -167.6333 l 40.1993,301.48437 c 1.4102,10.60157 10.4532,18.51563 21.1446,18.51563 h 69.3127 c 10.6914,0 19.7344,-7.91406 21.1446,-18.51563 z m 0,0"
      id="path1032"
-     inkscape:export-xdpi="7.3372359"
-     inkscape:export-ydpi="7.3372359" />
+     inkscape:export-xdpi="7.3372331"
+     inkscape:export-ydpi="7.3372331"
+     inkscape:export-filename="/home/daniel/development/reveal-games/resources/barista 02/Machiato-5.png" />
+  <rect
+     y="-645.4187"
+     x="-3284.4287"
+     height="469.30725"
+     width="469.30728"
+     id="rect1046"
+     style="opacity:1;fill:none;fill-opacity:1;stroke:#000001;stroke-width:2.04955697;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:6.14867066, 6.14867066;stroke-dashoffset:0;stroke-opacity:0.97071078"
+     inkscape:export-filename="/home/daniel/development/reveal-games/resources/barista 02/Machiato-8.png"
+     inkscape:export-xdpi="7.3400002"
+     inkscape:export-ydpi="7.3400002" />
   <path
-     style="fill:#aa644a"
+     id="path1048"
+     d="m -3004.8196,-197.45841 h -154.645 c -10.6914,0 -19.7344,-7.91406 -21.1446,-18.51563 l -40.1993,-301.48437 v -85.33202 h 277.3328 v 85.33202 l -40.1955,301.48437 c -1.414,10.60157 -10.457,18.51563 -21.1484,18.51563 z m 0,0"
      inkscape:connector-curvature="0"
-     d="m -999.22494,192 21.33206,149.33203 h 234.66797 L -721.89288,192 Z m 0,0"
-     id="path1042"
-     inkscape:export-xdpi="7.3372359"
-     inkscape:export-ydpi="7.3372359" />
+     style="fill:#e8a073"
+     inkscape:export-filename="/home/daniel/development/reveal-games/resources/barista 02/Machiato-8.png"
+     inkscape:export-xdpi="7.3400002"
+     inkscape:export-ydpi="7.3400002" />
   <path
-     style="fill:#b77b65"
+     id="path1050"
+     d="m -3069.0073,-215.97404 36.9806,-277.33203 c 0.8125,-6.09375 -1.0469,-12.24609 -5.0977,-16.87109 -4.0508,-4.62891 -9.9024,-7.28125 -16.0508,-7.28125 h -167.6333 l 40.1993,301.48437 c 1.4102,10.60157 10.4532,18.51563 21.1446,18.51563 h 69.3127 c 10.6914,0 19.7344,-7.91406 21.1446,-18.51563 z m 0,0"
      inkscape:connector-curvature="0"
-     d="m -999.22494,192 21.33206,149.33203 h 128 L -828.55694,192 Z m 0,0"
-     id="path1044"
-     inkscape:export-xdpi="7.3372359"
-     inkscape:export-ydpi="7.3372359" />
+     style="fill:#f9dcc9"
+     inkscape:export-filename="/home/daniel/development/reveal-games/resources/barista 02/Machiato-8.png"
+     inkscape:export-xdpi="7.3400002"
+     inkscape:export-ydpi="7.3400002" />
+  <rect
+     style="opacity:1;fill:none;fill-opacity:1;stroke:#000001;stroke-width:2.04955697;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:6.14867066, 6.14867066;stroke-dashoffset:0;stroke-opacity:0.97071078"
+     id="rect3753"
+     width="469.30728"
+     height="469.30725"
+     x="-3794.7939"
+     y="-645.4187"
+     inkscape:export-filename="/home/daniel/development/reveal-games/resources/barista 02/Machiato-9.png"
+     inkscape:export-xdpi="7.3400002"
+     inkscape:export-ydpi="7.3400002" />
+  <path
+     style="fill:#e8a073"
+     inkscape:connector-curvature="0"
+     d="m -3515.1834,-197.45841 h -154.645 c -10.6914,0 -19.7344,-7.91406 -21.1446,-18.51563 l -40.1993,-301.48437 v -85.33202 h 277.3328 v 85.33202 l -40.1955,301.48437 c -1.414,10.60157 -10.457,18.51563 -21.1484,18.51563 z m 0,0"
+     id="path3755"
+     inkscape:export-filename="/home/daniel/development/reveal-games/resources/barista 02/Machiato-9.png"
+     inkscape:export-xdpi="7.3400002"
+     inkscape:export-ydpi="7.3400002" />
+  <path
+     style="fill:#f9dcc9"
+     inkscape:connector-curvature="0"
+     d="m -3579.3711,-215.97404 36.9806,-277.33203 c 0.8125,-6.09375 -1.0469,-12.24609 -5.0977,-16.87109 -4.0508,-4.62891 -9.9024,-7.28125 -16.0508,-7.28125 h -167.6333 l 40.1993,301.48437 c 1.4102,10.60157 10.4532,18.51563 21.1446,18.51563 h 69.3127 c 10.6914,0 19.7344,-7.91406 21.1446,-18.51563 z m 0,0"
+     id="path3757"
+     inkscape:export-filename="/home/daniel/development/reveal-games/resources/barista 02/Machiato-9.png"
+     inkscape:export-xdpi="7.3400002"
+     inkscape:export-ydpi="7.3400002" />
+  <rect
+     y="-645.4187"
+     x="-4305.1592"
+     height="469.30725"
+     width="469.30728"
+     id="rect3759"
+     style="opacity:1;fill:none;fill-opacity:1;stroke:#000001;stroke-width:2.04955697;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:6.14867066, 6.14867066;stroke-dashoffset:0;stroke-opacity:0.97071078"
+     inkscape:export-filename="/home/daniel/development/reveal-games/resources/barista 02/Machiato-10.png"
+     inkscape:export-xdpi="7.3372335"
+     inkscape:export-ydpi="7.3372335" />
+  <path
+     id="path3761"
+     d="m -4025.5472,-197.45841 h -154.645 c -10.6914,0 -19.7344,-7.91406 -21.1446,-18.51563 l -40.1993,-301.48437 v -85.33202 h 277.3328 v 85.33202 l -40.1955,301.48437 c -1.414,10.60157 -10.457,18.51563 -21.1484,18.51563 z m 0,0"
+     inkscape:connector-curvature="0"
+     style="fill:#e8a073"
+     inkscape:export-filename="/home/daniel/development/reveal-games/resources/barista 02/Machiato-10.png"
+     inkscape:export-xdpi="7.3372335"
+     inkscape:export-ydpi="7.3372335" />
+  <path
+     id="path3763"
+     d="m -4089.7349,-215.97404 36.9806,-277.33203 c 0.8125,-6.09375 -1.0469,-12.24609 -5.0977,-16.87109 -4.0508,-4.62891 -9.9024,-7.28125 -16.0508,-7.28125 h -167.6333 l 40.1993,301.48437 c 1.4102,10.60157 10.4532,18.51563 21.1446,18.51563 h 69.3127 c 10.6914,0 19.7344,-7.91406 21.1446,-18.51563 z m 0,0"
+     inkscape:connector-curvature="0"
+     style="fill:#f9dcc9"
+     inkscape:export-filename="/home/daniel/development/reveal-games/resources/barista 02/Machiato-10.png"
+     inkscape:export-xdpi="7.3372335"
+     inkscape:export-ydpi="7.3372335" />
+  <rect
+     inkscape:export-ydpi="7.3400002"
+     inkscape:export-xdpi="7.3400002"
+     y="-645.4187"
+     x="-2263.6982"
+     height="469.30725"
+     width="469.30728"
+     id="rect3765"
+     style="opacity:1;fill:none;fill-opacity:1;stroke:#000001;stroke-width:2.04955697;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:6.14867066, 6.14867066;stroke-dashoffset:0;stroke-opacity:0.97071078"
+     inkscape:export-filename="/home/daniel/development/reveal-games/resources/barista 02/Machiato-6.png" />
+  <path
+     inkscape:export-ydpi="7.3400002"
+     inkscape:export-xdpi="7.3400002"
+     id="path3767"
+     d="m -1984.092,-197.45841 h -154.645 c -10.6914,0 -19.7344,-7.91406 -21.1446,-18.51563 l -40.1993,-301.48437 v -85.33202 h 277.3328 v 85.33202 l -40.1955,301.48437 c -1.414,10.60157 -10.457,18.51563 -21.1484,18.51563 z m 0,0"
+     inkscape:connector-curvature="0"
+     style="fill:#e8a073"
+     inkscape:export-filename="/home/daniel/development/reveal-games/resources/barista 02/Machiato-6.png" />
+  <path
+     inkscape:export-ydpi="7.3400002"
+     inkscape:export-xdpi="7.3400002"
+     id="path3769"
+     d="m -2048.2797,-215.97404 36.9806,-277.33203 c 0.8125,-6.09375 -1.0469,-12.24609 -5.0977,-16.87109 -4.0508,-4.62891 -9.9024,-7.28125 -16.0508,-7.28125 h -167.6333 l 40.1993,301.48437 c 1.4102,10.60157 10.4532,18.51563 21.1446,18.51563 h 69.3127 c 10.6914,0 19.7344,-7.91406 21.1446,-18.51563 z m 0,0"
+     inkscape:connector-curvature="0"
+     style="fill:#f9dcc9"
+     inkscape:export-filename="/home/daniel/development/reveal-games/resources/barista 02/Machiato-6.png" />
+  <rect
+     style="opacity:1;fill:none;fill-opacity:1;stroke:#000001;stroke-width:2.04955697;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:6.14867066, 6.14867066;stroke-dashoffset:0;stroke-opacity:0.97071078"
+     id="rect3775"
+     width="469.30728"
+     height="469.30725"
+     x="-2774.0635"
+     y="-645.4187"
+     inkscape:export-xdpi="7.3400002"
+     inkscape:export-ydpi="7.3400002"
+     inkscape:export-filename="/home/daniel/development/reveal-games/resources/barista 02/Machiato-7.png" />
+  <path
+     style="fill:#e8a073"
+     inkscape:connector-curvature="0"
+     d="m -2494.4558,-197.45841 h -154.645 c -10.6914,0 -19.7344,-7.91406 -21.1446,-18.51563 l -40.1993,-301.48437 v -85.33202 h 277.3328 v 85.33202 l -40.1955,301.48437 c -1.414,10.60157 -10.457,18.51563 -21.1484,18.51563 z m 0,0"
+     id="path3777"
+     inkscape:export-xdpi="7.3400002"
+     inkscape:export-ydpi="7.3400002"
+     inkscape:export-filename="/home/daniel/development/reveal-games/resources/barista 02/Machiato-7.png" />
+  <path
+     style="fill:#f9dcc9"
+     inkscape:connector-curvature="0"
+     d="m -2558.6435,-215.97404 36.9806,-277.33203 c 0.8125,-6.09375 -1.0469,-12.24609 -5.0977,-16.87109 -4.0508,-4.62891 -9.9024,-7.28125 -16.0508,-7.28125 h -167.6333 l 40.1993,301.48437 c 1.4102,10.60157 10.4532,18.51563 21.1446,18.51563 h 69.3127 c 10.6914,0 19.7344,-7.91406 21.1446,-18.51563 z m 0,0"
+     id="path3779"
+     inkscape:export-xdpi="7.3400002"
+     inkscape:export-ydpi="7.3400002"
+     inkscape:export-filename="/home/daniel/development/reveal-games/resources/barista 02/Machiato-7.png" />
+  <rect
+     inkscape:export-ydpi="7.3370075"
+     inkscape:export-xdpi="7.3370075"
+     style="opacity:1;fill:none;fill-opacity:1;stroke:#000001;stroke-width:2.04955697;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:6.14867066, 6.14867066;stroke-dashoffset:0;stroke-opacity:0.97071078"
+     id="rect3785"
+     width="469.30728"
+     height="469.30725"
+     x="-1062.8469"
+     y="0.039734282"
+     inkscape:export-filename="/home/daniel/development/reveal-games/resources/barista 02/Machiato-2.png" />
+  <path
+     inkscape:export-ydpi="7.3370075"
+     inkscape:export-xdpi="7.3370075"
+     style="fill:#e8a073"
+     inkscape:connector-curvature="0"
+     d="m -783.23663,448 h -154.64452 c -10.69141,0 -19.73438,-7.91406 -21.14453,-18.51563 L -999.2249,128 V 42.667969 h 277.33202 V 128 l -40.19531,301.48437 C -763.50226,440.08594 -772.54522,448 -783.23663,448 Z m 0,0"
+     id="path3789"
+     inkscape:export-filename="/home/daniel/development/reveal-games/resources/barista 02/Machiato-2.png" />
+  <path
+     inkscape:export-ydpi="7.3370075"
+     inkscape:export-xdpi="7.3370075"
+     style="fill:#f9dcc9"
+     inkscape:connector-curvature="0"
+     d="m -847.42413,429.48437 36.98047,-277.33203 c 0.8125,-6.09375 -1.04688,-12.24609 -5.09766,-16.87109 C -819.5921,130.65234 -825.44366,128 -831.5921,128 h -167.6328 l 40.19922,301.48437 C -957.61553,440.08594 -948.57256,448 -937.88115,448 h 69.31249 c 10.6914,0 19.73437,-7.91406 21.14453,-18.51563 z m 0,0"
+     id="path3791"
+     inkscape:export-filename="/home/daniel/development/reveal-games/resources/barista 02/Machiato-2.png" />
+  <path
+     sodipodi:nodetypes="cccsccssc"
+     id="path4646"
+     d="m -794.47916,413.96871 38.48158,-213.78142 c 0.8125,-4.19754 -1.0469,-8.43545 -5.09766,-11.62128 -4.0508,-3.18852 -9.9026,-5.04793 -16.05076,-5.01552 h -196.15308 l 43.20128,230.41822 c 1.4102,7.30266 10.45316,12.75408 21.14452,12.75408 h 93.32956 c 10.6914,0 19.73436,-5.45142 21.14456,-12.75408 z"
+     inkscape:connector-curvature="0"
+     style="fill:#711f21;fill-opacity:1;stroke-width:0.82995635"
+     inkscape:export-filename="/home/daniel/development/reveal-games/resources/barista 02/Machiato-2.png"
+     inkscape:export-xdpi="7.3370075"
+     inkscape:export-ydpi="7.3370075" />
   <rect
      y="0.039734282"
      x="-1573.208"
      height="469.30725"
      width="469.30728"
-     id="rect1046"
-     style="opacity:1;fill:none;fill-opacity:1;stroke:#000001;stroke-width:2.04955697;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:6.14867066, 6.14867066;stroke-dashoffset:0;stroke-opacity:0.97071078" />
+     id="rect3805"
+     style="opacity:1;fill:none;fill-opacity:1;stroke:#000001;stroke-width:2.04955697;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:6.14867066, 6.14867066;stroke-dashoffset:0;stroke-opacity:0.97071078"
+     inkscape:export-xdpi="7.3370075"
+     inkscape:export-ydpi="7.3370075"
+     inkscape:export-filename="/home/daniel/development/reveal-games/resources/barista 02/Machiato-3.png" />
   <path
-     id="path1048"
+     id="path3809"
      d="m -1293.5998,448 h -154.645 c -10.6914,0 -19.7344,-7.91406 -21.1446,-18.51563 L -1509.5887,128 V 42.667969 h 277.3328 V 128 l -40.1955,301.48437 c -1.414,10.60157 -10.457,18.51563 -21.1484,18.51563 z m 0,0"
      inkscape:connector-curvature="0"
-     style="fill:#e8a073" />
+     style="fill:#e8a073"
+     inkscape:export-xdpi="7.3370075"
+     inkscape:export-ydpi="7.3370075"
+     inkscape:export-filename="/home/daniel/development/reveal-games/resources/barista 02/Machiato-3.png" />
   <path
-     id="path1050"
+     id="path3811"
      d="m -1357.7875,429.48437 36.9806,-277.33203 c 0.8125,-6.09375 -1.0469,-12.24609 -5.0977,-16.87109 -4.0508,-4.62891 -9.9024,-7.28125 -16.0508,-7.28125 h -167.6333 l 40.1993,301.48437 c 1.4102,10.60157 10.4532,18.51563 21.1446,18.51563 h 69.3127 c 10.6914,0 19.7344,-7.91406 21.1446,-18.51563 z m 0,0"
      inkscape:connector-curvature="0"
-     style="fill:#f9dcc9" />
+     style="fill:#f9dcc9"
+     inkscape:export-xdpi="7.3370075"
+     inkscape:export-ydpi="7.3370075"
+     inkscape:export-filename="/home/daniel/development/reveal-games/resources/barista 02/Machiato-3.png" />
+  <path
+     style="fill:#711f21;fill-opacity:1;stroke-width:0.76740146"
+     inkscape:connector-curvature="0"
+     d="m -1304.8424,415.81884 38.4817,-182.76992 c 0.8125,-3.58864 -1.0469,-7.21179 -5.0977,-9.93547 -4.0508,-2.72599 -9.9026,-4.31567 -16.0508,-4.28797 h -196.1536 l 43.2014,196.99336 c 1.4102,6.24332 10.4532,10.90395 21.1446,10.90395 h 93.3298 c 10.6914,0 19.7344,-4.66063 21.1446,-10.90395 z"
+     id="path4644"
+     sodipodi:nodetypes="cccsccssc"
+     inkscape:export-filename="/home/daniel/development/reveal-games/resources/barista 02/Machiato-3.png"
+     inkscape:export-xdpi="7.3370075"
+     inkscape:export-ydpi="7.3370075" />
+  <path
+     style="fill:#711f21;fill-opacity:1;stroke-width:0.44465607"
+     inkscape:connector-curvature="0"
+     d="m -3016.0622,-222.39651 21.97,-61.36319 c 0.8125,-1.20485 -1.0469,-2.42129 -5.0977,-3.33574 -4.0508,-0.91522 -9.9026,-1.43964 -16.0508,-1.43964 h -155.6248 l 19.1843,66.13857 c 1.4102,2.09613 10.4532,3.66089 21.1446,3.66089 h 93.3298 c 10.6914,0 19.7344,-1.56476 21.1446,-3.66089 z"
+     id="path3827"
+     sodipodi:nodetypes="cccsccssc"
+     inkscape:export-filename="/home/daniel/development/reveal-games/resources/barista 02/Machiato-8.png"
+     inkscape:export-xdpi="7.3400002"
+     inkscape:export-ydpi="7.3400002" />
+  <path
+     sodipodi:nodetypes="cccsccssc"
+     id="path4638"
+     d="m -2505.6984,-224.24664 29.4753,-92.37469 c 0.8125,-1.81375 -1.0469,-3.64495 -5.0977,-5.02154 -4.0508,-1.37776 -9.9026,-2.1672 -16.0508,-2.1672 h -169.1344 l 25.1886,99.56343 c 1.4102,3.15547 10.4532,5.51102 21.1446,5.51102 h 93.3298 c 10.6914,0 19.7344,-2.35555 21.1446,-5.51102 z"
+     inkscape:connector-curvature="0"
+     style="fill:#711f21;fill-opacity:1;stroke-width:0.54556531"
+     inkscape:export-filename="/home/daniel/development/reveal-games/resources/barista 02/Machiato-7.png"
+     inkscape:export-xdpi="7.3400002"
+     inkscape:export-ydpi="7.3400002" />
+  <path
+     sodipodi:nodetypes="cccsccssc"
+     id="path4642"
+     d="m -1484.9708,-227.98626 38.4817,-155.05751 c 0.8125,-3.04452 -1.0469,-6.11831 -5.0977,-8.42902 -4.0508,-2.31266 -9.9026,-3.6613 -16.0508,-3.6378 h -196.1536 l 43.2014,167.12433 c 1.4102,5.29668 10.4532,9.25064 21.1446,9.25064 h 93.3298 c 10.6914,0 19.7344,-3.95396 21.1446,-9.25064 z"
+     inkscape:connector-curvature="0"
+     style="fill:#711f21;fill-opacity:1;stroke-width:0.70683277"
+     inkscape:export-filename="/home/daniel/development/reveal-games/resources/barista 02/Machiato-5.png"
+     inkscape:export-xdpi="7.3372331"
+     inkscape:export-ydpi="7.3372331" />
+  <path
+     style="fill:#711f21;fill-opacity:1;stroke-width:0.31610522"
+     inkscape:connector-curvature="0"
+     d="m -3526.426,-220.58575 17.4668,-31.0115 c 0.8125,-0.6089 -1.0469,-1.22366 -5.0977,-1.6858 -4.0508,-0.46254 -9.9026,-0.72756 -16.0508,-0.72756 h -146.6184 l 14.6811,33.42486 c 1.4102,1.05934 10.4532,1.85013 21.1446,1.85013 h 93.3298 c 10.6914,0 19.7344,-0.79079 21.1446,-1.85013 z"
+     id="path4667"
+     sodipodi:nodetypes="cccsccssc"
+     inkscape:export-filename="/home/daniel/development/reveal-games/resources/barista 02/Machiato-9.png"
+     inkscape:export-xdpi="7.3400002"
+     inkscape:export-ydpi="7.3400002" />
+  <path
+     style="fill:#711f21;fill-opacity:1;stroke-width:0.61861289"
+     inkscape:connector-curvature="0"
+     d="m -1995.3346,-225.82122 24.9721,-118.76745 c 0.8125,-2.33197 -1.0469,-4.68636 -5.0977,-6.45627 -4.0508,-1.7714 -9.9026,-2.7864 -16.0508,-2.7864 h -161.6291 l 22.1865,128.01012 c 1.4102,4.05704 10.4532,7.0856 21.1446,7.0856 h 93.3298 c 10.6914,0 19.7344,-3.02856 21.1446,-7.0856 z"
+     id="path4669"
+     sodipodi:nodetypes="cccsccssc"
+     inkscape:export-filename="/home/daniel/development/reveal-games/resources/barista 02/Machiato-6.png"
+     inkscape:export-xdpi="7.3400002"
+     inkscape:export-ydpi="7.3400002" />
 </svg>
