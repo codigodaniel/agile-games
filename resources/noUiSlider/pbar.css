@@ -1,0 +1,15 @@
+.p-bar {
+background-color: #e9ecef;
+border-radius: .25rem;
+margin: 30px auto;
+width: 300px;
+height: 1rem;
+overflow: hidden;
+}
+
+.p-bar-progress {
+	background-image: linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+	background-size: 1rem 1rem;
+	background-color: #17a2b8 !important;
+	height: 30px;
+}

@@ -47,11 +47,8 @@ function init_sliders(){
 
 onload = init_sliders;
 
-
-
 function pbar(value){
 	let el = document.getElementById('pbar');	
 	//el.style = "border:1px dashed blue;";
 	el.style = "width:"+value+"%;";
-
 }
