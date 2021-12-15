@@ -11,6 +11,7 @@ function init_sliders(){
 	        'min': 0,
 	        'max': 130
 	    }, 
+	    step: 1, 
 	    pips: {
 	    	mode: "values", 
 	    	values: [25, 50, 75, 100], 
@@ -27,12 +28,21 @@ function init_sliders(){
 	        'min': 0,
 	        'max': 130
 	    }, 
+	    step: 1,
 	    pips: {
 	    	mode: "values", 
 	    	values: [25, 50, 75, 100], 
 	    	density: 4
 	    }
 	});
+
+	// Bind the color changing function to the update event.
+    slider.noUiSlider.on('end', function () {
+    	let val = slider.noUiSlider.get();
+    	pbar(val);
+
+
+    });
 }
 
 onload = init_sliders;
