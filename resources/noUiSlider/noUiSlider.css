@@ -1,0 +1,16 @@
+table{
+	width: 60%;
+	margin: auto;
+}
+div.noUi-target{
+	margin: 60px;
+}
+
+.progress{
+	margin: 30px auto;
+	width:300px;
+}
+
+td{
+	border: 3px dashed blue;	
+}

@@ -1,0 +1,54 @@
+<html>
+<head>
+
+	<link href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+	<link href="https://refreshless.com/nouislider/dist/nouislider.css?v=1550" rel="stylesheet">
+	<script src="https://refreshless.com/nouislider/dist/nouislider.js?v=1550"></script>
+
+	<link href="noUiSlider.css" rel="stylesheet">
+	<script src="noUiSlider.js"></script>
+</head>
+<body>
+	<table>
+		<tr>
+			<td>
+				<div class="slider" id="slider-workload"></div>
+			</td>
+			<td>
+				<button onclick="pbar(20);">move 20</button>
+				<button onclick="pbar(50);">move 50</button>
+				<button onclick="pbar(70);">move 70</button>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="slider" id="slider-planning"></div>
+			</td>
+			<td>
+				<div class="progress">
+					<div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+				</div>
+				<div class="progress">
+					<div id="pbar" class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+				</div>
+				<div class="progress">
+					<div class="progress-bar progress-bar-striped" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+				</div>
+				<div class="progress">
+					<div class="progress-bar progress-bar-striped" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+				</div>
+				<div class="progress">
+					<div class="progress-bar progress-bar-striped" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+				</div>
+			</td>
+		</tr>
+	</table>
+
+
+
+</body>
+</html>
