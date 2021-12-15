@@ -52,3 +52,4 @@ function pbar(value){
 	//el.style = "border:1px dashed blue;";
 	el.style = "width:"+value+"%;";
 }
+
