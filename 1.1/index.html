@@ -1,60 +1,96 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
+<head>
+	<meta charset="utf-8">
 
-		<title>Schwarz IT Javascript Agile Games</title>
+	<title>Schwarz IT Javascript Agile Games</title>
 
-		<link rel="stylesheet" href="../reveal/dist/reset.css">
-		<link rel="stylesheet" href="../reveal/dist/reveal.css">
-		<link rel="stylesheet" href="../reveal/dist/theme/black.css" id="theme">
+	<link rel="stylesheet" href="../reveal/dist/reset.css">
+	<link rel="stylesheet" href="../reveal/dist/reveal.css">
+	<link rel="stylesheet" href="../reveal/dist/theme/black.css" id="theme">
+	<link rel="stylesheet" href="../reveal/dist/theme/black.css" id="theme">
 
-		<script type="text/javascript"  src="http://animejs.com/lib/anime.min.js"></script>
+	<script type="text/javascript"  src="http://animejs.com/lib/anime.min.js"></script>
 
-		<link rel="stylesheet" href="agile-sim/agile-games.css" id="theme">
-		<script type="text/javascript"  src="agile-sim/env/tools.js"></script>
-		<script type="text/javascript"  src="agile-sim/env/Thread.js"></script>
-		<script type="text/javascript"  src="agile-sim/kanban-s1.js"></script>
+	<link rel="stylesheet" href="agile-sim/agile-games.css" id="theme">
+	<script type="text/javascript"  src="agile-sim/env/tools.js"></script>
+	<script type="text/javascript"  src="agile-sim/env/Thread.js"></script>
+	<script type="text/javascript"  src="agile-sim/kanban-s1.js"></script>
 
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>
-					<h1>Welcome to Schwarz IT - Agile Games on Reveal</h1>
-				</section>
+	<!-- NO UI SLIDER -->
+	<link href="agile-sim/pbar.css" rel="stylesheet">
+	<link href="https://refreshless.com/nouislider/dist/nouislider.css?v=1550" rel="stylesheet">
+	<script src="https://refreshless.com/nouislider/dist/nouislider.js?v=1550"></script>
 
-				<section>
-					<h3>Section 1</h3>
-  <div id="k-board-s1-c1" class="k-board"></div>
-  <div id="k-board-s1-c2" class="k-board">
-  	
-  </div>
-  <div id="k-board-s1-c3" class="k-board"></div>
-  <div  class="k-board k-menu">
-	<button onclick="S1_handler.restart();">1: Reset Board</button> 
-	<select id="k-select-wip-s1" onchange="S1_handler.set_wip_limit(this.value);">
-		<option value="1">2: WIP limit = 1</option>
-		<option value="2">2: WIP limit = 2</option>
-		<option value="3">2: WIP limit = 3</option>
-		<option value="5">2: WIP limit = 5</option>
-		<option value="8">2: WIP limit = 8</option>
-		<option value="100">2: NO WIP limit!</option>
-	</select>
-	<button onclick="S1_handler.start_game(S1_handler);">3: Action!</button> 
-	<button onclick="S1_handler.pull_game_step();">3b: Step by step</button> 
-  </div>
-  <div id="k-board-s1-logs" class="k-board k-board-logs"></div>
-				</section>
-			</div>
+	<link href="agile-sim/noUiSlider.css" rel="stylesheet">
+	<script src="agile-sim/noUiSlider.js"></script>
+
+
+</head>
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h1>Welcome to Schwarz IT - Agile Games on Reveal</h1>
+			</section>
+
+			<section>
+				<h3>Section 1</h3>
+				<div id="k-board-s1-c1" class="k-board"></div>
+				<div id="k-board-s1-c2" class="k-board"></div>
+				<div id="k-board-s1-c3" class="k-board"></div>
+				<div  class="k-board k-menu">
+					<button onclick="S1_handler.restart();">1: Reset Board</button> 
+					<select id="k-select-wip-s1" onchange="S1_handler.set_wip_limit(this.value);">
+						<option value="1">2: WIP limit = 1</option>
+						<option value="2">2: WIP limit = 2</option>
+						<option value="3">2: WIP limit = 3</option>
+						<option value="5">2: WIP limit = 5</option>
+						<option value="8">2: WIP limit = 8</option>
+						<option value="100">2: NO WIP limit!</option>
+					</select>
+					<button onclick="S1_handler.start_game(S1_handler);">3: Action!</button> 
+					<button onclick="S1_handler.pull_game_step();">3b: Step by step</button> 
+				</div>
+				<div id="k-board-s1-logs" class="k-board k-board-logs"></div>
+			</section>
+			<section>
+				<table>
+					<tr>
+						<td>
+							<b class="pbar-label">Planned Capacity</b>
+							<div class="slider" id="slider-workload"></div>
+						</td>
+						<td>
+							<b class="pbar-label">Productivity</b>
+							<div class="p-bar"><div id="pbar-productivity" class="p-bar-progress" style="width:50%"></div></div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<b class="pbar-label">Planning Effort</b>
+							<div class="slider" id="slider-planning"></div>
+						</td>
+						<td>
+							<b class="pbar-label">Created Value</b>
+							<div class="p-bar"><div id="pbar-value" class="p-bar-progress" style="width:50%"></div></div>
+							<b class="pbar-label">Waste</b>
+							<div class="p-bar"><div id="pbar-waste" class="p-bar-progress" style="width:50%"></div></div>
+							<b class="pbar-label">Profit</b>
+							<div class="p-bar"><div id="pbar-profit" class="p-bar-progress" style="width:50%"></div></div>
+						</td>
+					</tr>
+				</table>
+			</section>
 		</div>
+	</div>
 
 
-		<script src="../reveal/dist/reveal.js"></script>
-		<script src="../reveal/plugin/notes/notes.js"></script>
-		<script src="../reveal/plugin/markdown/markdown.js"></script>
-		<script src="../reveal/plugin/highlight/highlight.js"></script>
-		<script>
+	<script src="../reveal/dist/reveal.js"></script>
+	<script src="../reveal/plugin/notes/notes.js"></script>
+	<script src="../reveal/plugin/markdown/markdown.js"></script>
+	<script src="../reveal/plugin/highlight/highlight.js"></script>
+	<script>
 			// More info about initialization & config:
 			// - https://revealjs.com/initialization/
 			// - https://revealjs.com/config/
@@ -67,4 +103,4 @@
 		</script>
 
 	</body>
-</html>
+	</html>

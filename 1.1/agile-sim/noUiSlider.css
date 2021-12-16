@@ -1,0 +1,24 @@
+table{
+	width: 60%;
+	margin: auto;
+}
+
+div.noUi-target{
+	margin: 10px;
+	width: 200px;
+	top: 20px;
+	left: 10px;
+}
+
+div.noUi-value{
+	font-size: 14px;
+}
+.progress{
+	margin: 30px auto;
+	width:300px;
+}
+
+td{
+	border: 3px dashed blue;	
+}
+
