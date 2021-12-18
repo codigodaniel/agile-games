@@ -5,25 +5,32 @@
 
 	<title>Schwarz IT Javascript Agile Games</title>
 
+<!-- 
 	<link rel="stylesheet" href="../reveal/dist/reset.css">
 	<link rel="stylesheet" href="../reveal/dist/reveal.css">
 	<link rel="stylesheet" href="../reveal/dist/theme/black.css" id="theme">
-	<link rel="stylesheet" href="../reveal/dist/theme/black.css" id="theme">
+-->
+<link rel="stylesheet" href="../ignore/reveal-academy.css">
+<link rel="stylesheet" href="../ignore/jkanban-academy.css">
+<link rel="stylesheet" href="../ignore/alexandria.css">
 
-	<script type="text/javascript"  src="http://animejs.com/lib/anime.min.js"></script>
 
-	<link rel="stylesheet" href="agile-sim/agile-games.css" id="theme">
-	<script type="text/javascript"  src="agile-sim/env/tools.js"></script>
-	<script type="text/javascript"  src="agile-sim/env/Thread.js"></script>
-	<script type="text/javascript"  src="agile-sim/kanban-s1.js"></script>
+<!-- AGILE wip GAME -->
+<script type="text/javascript"  src="http://animejs.com/lib/anime.min.js"></script>
 
-	<!-- NO UI SLIDER -->
-	<link href="agile-sim/pbar.css" rel="stylesheet">
-	<link href="https://refreshless.com/nouislider/dist/nouislider.css?v=1550" rel="stylesheet">
-	<script src="https://refreshless.com/nouislider/dist/nouislider.js?v=1550"></script>
+<link rel="stylesheet" href="agile-sim/agile-games.css" id="theme">
+<script type="text/javascript"  src="agile-sim/env/tools.js"></script>
+<script type="text/javascript"  src="agile-sim/env/Thread.js"></script>
+<script type="text/javascript"  src="agile-sim/kanban-s1.js"></script>
 
-	<link href="agile-sim/noUiSlider.css" rel="stylesheet">
-	<script src="agile-sim/noUiSlider.js"></script>
+<!-- AGILE optimize GAME -->
+<link href="agile-sim/env/progress-bar/p-bar.css" rel="stylesheet">
+<script src="agile-sim/env/progress-bar/p-bar.js"></script>
+<link href="https://refreshless.com/nouislider/dist/nouislider.css?v=1550" rel="stylesheet">
+<script src="https://refreshless.com/nouislider/dist/nouislider.js?v=1550"></script>
+
+<link href="agile-sim/optimizing/optimizing.css" rel="stylesheet">
+<script src="agile-sim/optimizing/optimizing.js"></script>
 
 
 </head>
@@ -55,36 +62,30 @@
 				<div id="k-board-s1-logs" class="k-board k-board-logs"></div>
 			</section>
 			<section>
-				<table>
-					<tr>
-						<td>
-							<b class="pbar-label">Planned Capacity</b>
-							<div class="slider" id="slider-workload"></div>
-						</td>
-						<td>
-							<b class="pbar-label">Productivity</b>
-							<div class="p-bar"><div id="pbar-productivity" class="p-bar-progress" style="width:50%"></div></div>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<b class="pbar-label">Planning Effort</b>
-							<div class="slider" id="slider-planning"></div>
-						</td>
-						<td>
-							<b class="pbar-label">Created Value</b>
-							<div class="p-bar"><div id="pbar-value" class="p-bar-progress" style="width:50%"></div></div>
-							<b class="pbar-label">Waste</b>
-							<div class="p-bar"><div id="pbar-waste" class="p-bar-progress" style="width:50%"></div></div>
-							<b class="pbar-label">Profit</b>
-							<div class="p-bar"><div id="pbar-profit" class="p-bar-progress" style="width:50%"></div></div>
-						</td>
-					</tr>
-				</table>
+				<h4>Experience: optimize the Scrum Team</h4>
+				<div class="combine">
+					<div>
+						<h4>Planned Capacity</h4>
+						<div class="slider" id="slider-workload"></div>
+						<div class="spacer-50"></div>
+						<div class="spacer-w-300"></div>
+						<h4>Planning Effort</h4>
+						<div class="slider" id="slider-planning"></div>
+					</div> 
+					<div> 
+						<h4>Productivity </h4> 
+						<div class="p-bar"><div id="pbar-productivity" class="p-bar-progress" style="width:50%"></div></div>
+						<h4>Created Value</h4> 
+						<div class="p-bar"><div id="pbar-value" class="p-bar-progress" style="width:50%"></div></div>
+						<h4>Waste</h4> 
+						<div class="p-bar"><div id="pbar-waste" class="p-bar-progress" style="width:50%"></div></div>
+						<h4>Profit</h4> 
+						<div class="p-bar"><div id="pbar-profit" class="p-bar-progress" style="width:50%"></div></div>
+					</div>
+				</div>
 			</section>
 		</div>
 	</div>
-
 
 	<script src="../reveal/dist/reveal.js"></script>
 	<script src="../reveal/plugin/notes/notes.js"></script>

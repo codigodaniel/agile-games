@@ -1,10 +1,10 @@
 .p-bar {
-background-color: #e9ecef;
-border-radius: .25rem;
-margin: 30px auto;
-width: 300px;
-height: 1rem;
-overflow: hidden;
+	background-color: #e9ecef;
+	border-radius: .25rem;
+	margin: 30px 10px;
+	width: 300px;
+	height: 1rem;
+	overflow: hidden;
 }
 
 .p-bar-progress {
@@ -12,8 +12,4 @@ overflow: hidden;
 	background-size: 1rem 1rem;
 	background-color: #17a2b8 !important;
 	height: 30px;
-}
-
-.pbar-label{
-	font-size: 17px;
 }

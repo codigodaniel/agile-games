@@ -1,0 +1,47 @@
+table{
+	width: 60%;
+	margin: auto;
+}
+
+div.noUi-target{
+	margin: 0px;
+	width: 90%;
+	top: 20px;
+	left: 10px;
+}
+
+div.noUi-value{
+	font-size: 14px;
+	padding: 4px;
+}
+
+td{
+	border: 3px dashed blue;	
+}
+
+div.spacer-w-300{
+	width: 300px;
+}
+
+div.spacer-30{
+	height: 30px;
+}
+div.spacer-50{
+	height: 50px;
+}
+
+div.spacer-60{
+	height: 60px;
+}
+
+h4{
+	padding: 0;
+	text-transform: uppercase;
+	text-align: center;
+	color: #444422;
+	font-family: "Amatic SC";
+	font-weight: 700;
+	letter-spacing: 0.05rem;
+	font-size: 23px;
+	margin:10px 10px 5px 10px;
+}
